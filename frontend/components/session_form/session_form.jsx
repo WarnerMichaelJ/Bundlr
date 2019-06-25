@@ -48,6 +48,8 @@ class SessionForm extends React.Component {
         <br />
     </label> ) : null;
 
+    
+
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">

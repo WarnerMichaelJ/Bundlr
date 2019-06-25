@@ -9,6 +9,5 @@ Rails.application.routes.draw do
   root "static_pages#root"
 end
 
-# "api/users"
+# "api/users" since we will likely need multiple users
 
-# 

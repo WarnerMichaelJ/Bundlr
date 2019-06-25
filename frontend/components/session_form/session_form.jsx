@@ -39,11 +39,12 @@ class SessionForm extends React.Component {
   render() {
 
     const email = this.props.formType === 'signup' ? (
-    <label>Email: 
+    <label>
         <input type="text"
           value={this.state.email}
           onChange={this.update('email')}
           className="login-input"
+          placeholder="Email"
         />
         <br />
     </label> ) : null;
@@ -52,33 +53,37 @@ class SessionForm extends React.Component {
 
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to the Bundlr App!
-          <br />
-          Please {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
-          <div className="login-form">
+        <div className="background-of-session-form">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            <h1 className="Bundlr-Big-Text"> bundlr </h1>
             <br />
-            {email}
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <input className="session-submit" type="submit" value={this.props.formType} />
-          </div>
-        </form>
+            <h3 className="Please-this-or-this"> Please {this.props.formType} or {this.props.navLink} </h3>
+            {this.renderErrors()}
+            <div className="login-form">
+              <br />
+              {email}
+              <label>
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                  placeholder="Username"
+                />
+              </label>
+              <br />
+              <label>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                  placeholder="Password"
+                />
+              </label>
+              <br />
+              <input className="session-submit" type="submit" value={this.props.formType} />
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

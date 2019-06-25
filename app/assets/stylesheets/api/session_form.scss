@@ -1,0 +1,62 @@
+// Place all the styles related to the api/users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  background-image: image-url("Bundlr_App_Image_From_Unsplash.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: 100%;
+}
+
+.login-signup {
+  position: absolute;
+  top:  30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 40px;
+}
+
+input {
+  width: 100%;
+  padding: 11px 10px 11px 13px;
+  display: block;
+  margin: 0;
+  border: none;
+  background: white;
+  font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.background-of-session-form {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+.Bundlr-Big-Text {
+  float: none;
+  font-family: Georgia;
+  overflow: hidden;
+  margin: auto;
+  height: 50px;
+  padding: 0;
+  vertical-align: baseline;
+}
+*/
+
+.Bundlr-Big-Text {
+  font-family: Georgia;
+  color: white;
+  font-size: 60px; 
+  font-weight: 700;
+}
+
+.login-form-container {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: signupFormIntro .3s ease-out .7s;
+}

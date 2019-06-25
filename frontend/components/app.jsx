@@ -20,13 +20,13 @@ const App = () => {
     <div>
       <header>
         <Link to="/" className="header-link">
-          <h1>Bundlr App</h1>
+          <h1><i class='fas fa-basketball-ball' ></i></h1>
         </Link>
-        <GreetingContainer />
       </header>
         <Switch>
           <AuthRoute exact path="/login" component={LogInFormContainer} />
           <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+          <AuthRoute exact path="/" component={GreetingContainer} />
         </Switch>
 
     </div>

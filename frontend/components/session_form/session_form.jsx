@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
 
   render() {
 
-    const email = this.props.formType === 'signup' ? (
+    const email = this.props.formType === 'Sign up' ? (
     <label>
         <input type="text"
           value={this.state.email}
@@ -53,11 +53,11 @@ class SessionForm extends React.Component {
 
     return (
       <div className="login-form-container">
+        <h3 className="Log-In-Or-Sign-Up"> {this.props.navLink} </h3>
         <div className="background-of-session-form">
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <h1 className="Bundlr-Big-Text"> bundlr </h1>
             <br />
-            <h3 className="Please-this-or-this"> Please {this.props.formType} or {this.props.navLink} </h3>
             {this.renderErrors()}
             <div className="login-form">
               <br />

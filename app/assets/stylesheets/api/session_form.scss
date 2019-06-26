@@ -77,6 +77,15 @@ input {
 }
 
 
+.Log-In-Or-Sign-Up {
+  font-size: 20px; 
+  position: relative;
+  left: 200%;
+  bottom: 150px;
+  color: white;
+}
+
+
 .header-group {
   font-size: 20px; 
   position: relative;
@@ -87,4 +96,9 @@ input {
   font-size: 12px;
   position: relative;
   left: 10%;
+}
+
+.session-submit {
+  color: white; 
+  background: #33CCFF;
 }

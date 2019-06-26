@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-  window.logout = APIUtil.logout;
-  window.store = store; 
+  // window.logout = APIUtil.logout;
+  // window.store = store; 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

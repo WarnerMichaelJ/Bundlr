@@ -22,3 +22,28 @@ const receiveBlogErrors = (errors) => ({
   errors
 });
 
+export const postBlog = (blog) => (dispatch) => BlogUtil.postBlog(blog)
+  .then(
+    (blog) => dispatch(receiveBlog(blog)),
+    (errors) => dispatch(receiveBlogErrors(errors.responseJSON))
+  );
+
+export const updateBlog = (blog) => (dispatch) => BlogUtil.updateBlog(blog)
+  .then(
+    (blog) => dispatch(receiveBlog(blog)),
+    (errors) => dispatch(receiveBlogErrors(errors.responseJSON))
+  );
+
+const removeBlog = (blogId) => ({
+  type: REMOVE_BLOG,
+  blogId
+});
+
+
+export const deleteBlog = (blogId) => (dispatch) => BlogUtil.deleteBlog(blogId)
+  .then(
+    (blog) => dispatch(removeBlog(blogId)),
+    (errors) => dispatch(receiveBlogErrors(errors.responseJSON))
+  );
+
+  

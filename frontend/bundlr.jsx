@@ -5,6 +5,8 @@ import * as BlogUtil from './util/blog_util';
 import * as BlogThunkActions from './actions/blog_actions';
 import * as PostUtil from './util/post_util';
 
+import * as PostThunkActions from './actions/post_actions';
+
 import Root from './components/root';
 import configureStore from './store/store';
 

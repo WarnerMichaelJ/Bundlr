@@ -22,7 +22,7 @@ const receiveBlogErrors = (errors) => ({
   errors
 });
 
-export const postBlog = (blog) => (dispatch) => BlogUtil.postBlog(blog)
+export const createBlog = (blog) => (dispatch) => BlogUtil.createBlog(blog)
   .then(
     (blog) => dispatch(receiveBlog(blog)),
     (errors) => dispatch(receiveBlogErrors(errors.responseJSON))
@@ -46,4 +46,3 @@ export const deleteBlog = (blogId) => (dispatch) => BlogUtil.deleteBlog(blogId)
     (errors) => dispatch(receiveBlogErrors(errors.responseJSON))
   );
 
-  

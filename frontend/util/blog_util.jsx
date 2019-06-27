@@ -1,8 +1,8 @@
-export const postBlog = (blog) => (
+export const createBlog = (blog) => (
   $.ajax({
     method: 'POST',
     url: '/api/blogs',
-    data: blog
+    data: { blog: blog }
   })
 );
 
@@ -24,7 +24,7 @@ export const updateBlog = (blog) => (
   $.ajax({
     method: 'PATCH',
     url: `/api/blogs/${blog.id}`,
-    data: blog
+    data: { blog: blog }
   })
 );
 

@@ -15,7 +15,8 @@ class Api::BlogsController < ApplicationController
     @blog = current_user.blogs.find(params[:id])
 
     if @blog.destroy 
-      render '/api/users/show' #I think I'll change this to the user's general posts feed eventually
+      # render '/api/users/show' #I think I'll change this to the user's general posts feed eventually
+      render json: ['Nice, it totally worked']
     else 
       render json: ['This blog is indestructible'], status: 404
     end
@@ -33,10 +34,12 @@ class Api::BlogsController < ApplicationController
   end
 
   def update 
+    debugger
     @blog = current_user.blogs.find(params[:blog][:id])
 
     if @blog.update(blog_params)
-      render :show 
+      # render :show 
+      
     else 
       render json: @blog.errors.full_messages, status: 422
     end
@@ -46,7 +49,7 @@ class Api::BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:name, :description)
+    params.require(:blog).permit(:name, :description, :author_id)
   end
 
 end

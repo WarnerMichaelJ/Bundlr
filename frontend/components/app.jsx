@@ -5,6 +5,11 @@ import LogInFormContainer from './session_form/login_form_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+import CreateBlogFormContainer from './blogs/create_blog_form_container';
+import UpdateBlogFormContainer from './blogs/update_blog_form_container';
+import BlogShowContainer from './blogs/blog_show_container';
+
+
 
 import {
   Route,
@@ -26,7 +31,16 @@ const App = () => {
         <Switch>
           <AuthRoute exact path="/login" component={LogInFormContainer} />
           <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+
+          <ProtectedRoute exact path="/blogs/new" component={CreateBlogFormContainer} />
+          <ProtectedRoute exact path="/blogs/edit" component={UpdateBlogFormContainer} /> 
+
+          <AuthRoute exact path="/blogs/:blogId" component={BlogShowContainer} />
+
+
+
           <Route path="/" component={GreetingContainer} />
+
         </Switch>
 
     </div>

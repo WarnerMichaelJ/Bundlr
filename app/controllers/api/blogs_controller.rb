@@ -34,7 +34,6 @@ class Api::BlogsController < ApplicationController
   end
 
   def update 
-    debugger
     @blog = current_user.blogs.find(params[:blog][:id])
 
     if @blog.update(blog_params)

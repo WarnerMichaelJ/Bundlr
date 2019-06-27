@@ -30,7 +30,7 @@ export const updatePost = (post) => (
 
 export const fetchPosts = () => (
   $.ajax({
-    method: 'get',
+    method: 'GET',
     url: '/api/posts'
   })
 );

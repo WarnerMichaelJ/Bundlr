@@ -8,8 +8,10 @@ import merge from 'lodash/merge';
 const postsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let newState;
+  
   switch (action.type) {
     case RECEIVE_POSTS:
+      debugger;
       return merge({}, oldState, action.posts);
     case RECEIVE_POST:
       return merge({}, oldState, { [action.post.id]: action.post });

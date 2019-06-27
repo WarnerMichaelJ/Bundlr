@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import * as APIUtil from './util/session_api_util';
 import * as BlogUtil from './util/blog_util';
 import * as BlogThunkActions from './actions/blog_actions';
+import * as PostUtil from './util/post_util';
 
 import Root from './components/root';
 import configureStore from './store/store';
@@ -23,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.store = store; 
-  window.BlogThunkActions = BlogThunkActions;
+  // window.PostUtil = PostUtil;
+  // window.BlogThunkActions = BlogThunkActions;
   // window.BlogUtil = BlogUtil;
   // window.logout = APIUtil.logout;
   const root = document.getElementById('root');

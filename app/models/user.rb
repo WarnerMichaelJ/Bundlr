@@ -21,10 +21,11 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  has_many :blogs, 
+  has_many :posts, 
   primary_key: :id,
   foreign_key: :author_id,
-  class_name: 'Blog'
+  class_name: 'Post',
+  dependent: :destroy
 
   
 

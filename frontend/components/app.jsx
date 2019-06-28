@@ -37,7 +37,7 @@ const App = () => {
 
           <AuthRoute exact path="/blogs/:blogId" component={BlogShowContainer} />
 
-
+          
 
           <Route path="/" component={GreetingContainer} />
 

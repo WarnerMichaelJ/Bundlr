@@ -39,7 +39,7 @@ class Api::PostsController < ApplicationController
 
     if @post.update(post_params)
       # render :show 
-      
+      render json: @post 
     else 
       render json: @post.errors.full_messages, status: 422
     end

@@ -19,8 +19,8 @@
 
 .Log-In-Or-Sign-Up {
   font-size: 20px; 
-  position: relative;
-  left: 10%;
+  position: relative; 
+  left: 90%;
   bottom: 0;
   color: white;
   z-index: 1;
@@ -37,6 +37,7 @@ input {
   background: white;
   font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   box-sizing: border-box;
+  cursor: pointer
 }
 
 

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.PostUtil = PostUtil;
   // window.BlogThunkActions = BlogThunkActions;
   // window.BlogUtil = BlogUtil;
-  // window.logout = APIUtil.logout;
+  window.logout = APIUtil.logout;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

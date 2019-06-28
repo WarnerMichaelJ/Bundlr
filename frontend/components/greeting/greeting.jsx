@@ -18,7 +18,7 @@ const Greeting = ({ currentUser, logout }) => {
       <button className="header-button" onClick={logout}>Log Out</button>
       <br />
       <br />
-      <button className="create-your-blog" onClick={logout}>(Put Pencil Icon Here)</button>
+      <button className="create-your-blog" onClick={logout}>(Put Pencil Icon Here after adding the post_form modal functionality)</button>
       {/* The onClick for pencil icon above, should dispatch a pojo. We should dispatch
       a pojo that updates our redux state to show that we should be displaying our modal. And also
       which modal we should be displaying. What's nice about modals

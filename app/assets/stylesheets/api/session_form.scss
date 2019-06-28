@@ -21,7 +21,7 @@
   font-size: 20px; 
   position: relative; 
   left: 90%;
-  bottom: 0;
+  top: 15px; 
   color: white;
   z-index: 1;
 }
@@ -86,8 +86,10 @@ input {
 }
 
 
-.fas fa-basketball-ball {
-  z-index: 1;
+.fa-file-archive {
+  position: absolute; 
+  top: 15px;
+  left: 15px;
 }
 
 .Demo-Login-Button {

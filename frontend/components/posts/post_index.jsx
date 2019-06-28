@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 
 import { Link } from 'react-router-dom';
 
+
 import PostIndexItem from './post_index_item';
+
+import NavBar from '../nav_bar/nav_bar_container';
 
 class PostIndex extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = this.props.posts; 
   }
 
@@ -31,9 +34,11 @@ class PostIndex extends React.Component {
         />
       );
     });
+    
     return (
-      <div>
+      <div className="post_index_parent_div">
         <ul>
+          <NavBar />
           {posts}
         </ul>
       </div>

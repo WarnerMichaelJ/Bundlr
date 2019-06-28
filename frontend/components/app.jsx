@@ -26,18 +26,14 @@ const App = () => {
     <div>
       <header>
         <Link to="/" className="header-link">
-          <h1><i className='fas fa-basketball-ball' ></i></h1>
+          <h1><i className="fas fa-file-archive"></i></h1>
         </Link>
       </header>
         <Switch>
           <AuthRoute exact path="/login" component={LogInFormContainer} />
           <AuthRoute exact path="/signup" component={SignUpFormContainer} />
 
-          <ProtectedRoute exact path="/blogs/new" component={CreateBlogFormContainer} />
-          <ProtectedRoute exact path="/blogs/edit" component={UpdateBlogFormContainer} /> 
 
-          <ProtectedRoute exact path="/blogs/:blogId" component={BlogShowContainer} />
- 
           <ProtectedRoute exact path="/posts" component={PostIndexContainer} />
 
           <Route path="/" component={GreetingContainer} />
@@ -49,3 +45,11 @@ const App = () => {
 };
 
 export default App;
+
+
+
+{/* <ProtectedRoute exact path="/blogs/new" component={CreateBlogFormContainer} />
+<ProtectedRoute exact path="/blogs/edit" component={UpdateBlogFormContainer} />
+
+<ProtectedRoute exact path="/blogs/:blogId" component={BlogShowContainer} /> */}
+// May add these routes again later 

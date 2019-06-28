@@ -2,22 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html {
+
+.sign-up-login-background {
   background-image: image-url("Bundlr_App_Image_From_Unsplash.jpeg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  height: 100%; 
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-position: center; 
+  background-repeat: 0;
   background-size: 100%;
-  display: flex;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
-.login-signup {
-  position: absolute;
-  top:  30%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  font-size: 40px;
+.Log-In-Or-Sign-Up {
+  font-size: 20px; 
+  position: relative;
+  left: 10%;
+  bottom: 0;
+  color: white;
+  z-index: 1;
 }
+
+
 
 input {
   width: 100%;
@@ -30,22 +39,6 @@ input {
   box-sizing: border-box;
 }
 
-.background-of-session-form {
-  height: 100%;
-  width: 100%;
-}
-
-/*
-.Bundlr-Big-Text {
-  float: none;
-  font-family: Georgia;
-  overflow: hidden;
-  margin: auto;
-  height: 50px;
-  padding: 0;
-  vertical-align: baseline;
-}
-*/
 
 .Bundlr-Big-Text {
   font-family: Georgia;
@@ -73,14 +66,6 @@ input {
 }
 
 
-.Log-In-Or-Sign-Up {
-  font-size: 20px; 
-  position: relative;
-  left: 200%;
-  bottom: 150px;
-  color: white;
-}
-
 
 .header-group {
   font-size: 20px; 
@@ -101,5 +86,18 @@ input {
 
 
 .fas fa-basketball-ball {
-  
+  z-index: 1;
 }
+
+.Demo-Login-Button {
+  color: black; 
+  background: white;
+  width: 100%;
+  padding: 11px 10px 11px 13px;
+  display: block;
+  margin: 0;
+  border: none;
+  font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+

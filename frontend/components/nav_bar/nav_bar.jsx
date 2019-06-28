@@ -19,20 +19,20 @@ class NavBar extends React.Component {
 
   render () {
 
-
-    return (
+    const loggedInNavBar = (
       <div className="nav-bar-parent-div">
+
+        <div className="logo-and-search-container">
+          <Link to="/posts">
+            <i className="fas fa-file-archive"></i>
+          </Link>
+
+          <input className="search-bar-input" type="text" placeholder="Search Bundlr" />
+ 
+        </div>
+
         <ul className="nav-bar-ul">
-          <li>
-            <Link to="/posts">
-              <h1><i className="fas fa-file-archive"></i></h1>
-            </Link>
-          </li>
-
-          <li>   
-            <input className="search-bar-input" type="text" placeholder="Search Bundlr" />
-          </li>
-
+          
 
           <li>
             <Link to={"/"}><i className="fas fa-home"></i></Link>
@@ -49,16 +49,26 @@ class NavBar extends React.Component {
           <li>
             <Link to={"/"}><i className="far fa-user"></i></Link>
           </li>
-          
+
           <li>
             <Link to={"/"}><i className="far fa-edit"></i></Link>
           </li>
-
-    
-
+          <li>
+            <button className="header-button" onClick={this.logout}>Log Out</button>
+          </li>
         </ul>
       </div>
     );
+
+    const loggedOutNavBar = (
+      <header>
+        <Link to="/" className="header-link">
+          <h1><i className="fas fa-file-archive"></i></h1>
+        </Link>
+      </header>
+    );
+
+    return this.props.currentUser ? loggedInNavBar : loggedOutNavBar;
 
   }
 

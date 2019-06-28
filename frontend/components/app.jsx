@@ -11,6 +11,7 @@ import BlogShowContainer from './blogs/blog_show_container';
 
 import PostIndexContainer from './posts/post_index_container';
 
+import NavBarContainer from './nav_bar/nav_bar_container';
 
 import {
   Route,
@@ -24,21 +25,17 @@ import {
 const App = () => {
   return (
     <div>
-      <header>
-        <Link to="/" className="header-link">
-          <h1><i className="fas fa-file-archive"></i></h1>
-        </Link>
-      </header>
-        <Switch>
-          <AuthRoute exact path="/login" component={LogInFormContainer} />
-          <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+      <NavBarContainer />
+      <Switch>
+        <AuthRoute exact path="/login" component={LogInFormContainer} />
+        <AuthRoute exact path="/signup" component={SignUpFormContainer} />
 
 
-          <ProtectedRoute exact path="/posts" component={PostIndexContainer} />
+        <ProtectedRoute exact path="/posts" component={PostIndexContainer} />
 
-          <Route path="/" component={GreetingContainer} />
+        <AuthRoute exact path="/" component={GreetingContainer} />
 
-        </Switch>
+      </Switch>
 
     </div>
   );

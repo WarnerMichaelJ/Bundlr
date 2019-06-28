@@ -31,14 +31,15 @@ class PostIndex extends React.Component {
           post={post}
           key={post.id}
           deletePost={this.props.deletePost}
+          
         />
       );
     });
     
     return (
       <div className="post_index_parent_div">
+
         <ul>
-          <NavBar />
           {posts}
         </ul>
       </div>

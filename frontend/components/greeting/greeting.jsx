@@ -27,7 +27,9 @@ const Greeting = ({ currentUser, logout }) => {
     </hgroup>
   );
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return (
+    <div>This is the Splash Page, greeting.jsx</div>
+  );
 };
 
 

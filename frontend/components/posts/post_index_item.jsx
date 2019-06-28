@@ -8,6 +8,8 @@ const PostIndexItem = ({ post, deletePost }) => (
     {post.title}
     <br />
     {post.body}
+    <br />
+    <img src={window.images.doncic_picture} /> 
   </li>
 );
 

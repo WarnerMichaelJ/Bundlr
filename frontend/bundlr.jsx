@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-  // window.store = store; 
-  // window.PostThunkActions = PostThunkActions;
-  // window.PostUtil = PostUtil;
+  window.store = store; 
+  window.PostThunkActions = PostThunkActions;
+  window.PostUtil = PostUtil;
   // window.BlogThunkActions = BlogThunkActions;
   // window.BlogUtil = BlogUtil;
   // window.logout = APIUtil.logout;

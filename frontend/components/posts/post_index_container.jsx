@@ -3,6 +3,7 @@ import { fetchPost, createPost, updatePost, deletePost, fetchPosts } from '../..
 import PostIndex from './post_index';
 
 
+
 const msp = state => {
   let posts = Object.values(state.entities.posts);
   return {

@@ -9,6 +9,7 @@ import CreateBlogFormContainer from './blogs/create_blog_form_container';
 import UpdateBlogFormContainer from './blogs/update_blog_form_container';
 import BlogShowContainer from './blogs/blog_show_container';
 
+import PostIndexContainer from './posts/post_index_container';
 
 
 import {
@@ -37,6 +38,7 @@ const App = () => {
 
           <ProtectedRoute exact path="/blogs/:blogId" component={BlogShowContainer} />
  
+          <ProtectedRoute exact path="/posts" component={PostIndexContainer} />
 
           <Route path="/" component={GreetingContainer} />
 

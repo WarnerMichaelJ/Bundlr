@@ -3,24 +3,25 @@ import ReactDOM from 'react-dom';
 
 import { Link } from 'react-router-dom';
 
-import PostIndexItem from './post_index';
-
-
+import PostIndexItem from './post_index_item';
 
 class PostIndex extends React.Component {
   constructor(props) {
     super(props);
-
+    
     this.state = this.props.posts; 
   }
 
   componentDidMount() {
     this.props.fetchPosts();
-    
+
   }
 
 
   render () {
+
+    if (!this.props.posts) return null;
+
     let posts = this.props.posts.map(post => {
       return (
         <PostIndexItem 
@@ -28,28 +29,17 @@ class PostIndex extends React.Component {
           key={post.id}
           deletePost={this.props.deletePost}
         />
-      )
-    })
+      );
+    });
+    return (
+      <div>
+        <ul>
+          {posts}
+        </ul>
+      </div>
+    );
   }
 
 }
 
-// render() {
-//   let events = this.props.events.map(event => {
-//     return (
-//       <EventIndexItem
-//         event={event}
-//         key={event.id}
-//         deleteEvent={this.props.deleteEvent}
-//       />
-//     );
-//   });
-//   return (
-//     <div>
-//       <ul>
-//         {events}
-//       </ul>
-//       <Link to={`/events/new`}></Link>
-//     </div>
-//   );
-}
+export default PostIndex;

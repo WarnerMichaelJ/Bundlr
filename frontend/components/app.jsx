@@ -13,6 +13,8 @@ import PostIndexContainer from './posts/post_index_container';
 
 import NavBarContainer from './nav_bar/nav_bar_container';
 
+import PostOptionsDisplayBar from './post_options_display_bar/post_options_display_bar_container';
+
 import {
   Route,
   Redirect,
@@ -26,6 +28,7 @@ const App = () => {
   return (
     <div>
       <NavBarContainer />
+      <PostOptionsDisplayBar />
       <Switch>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />

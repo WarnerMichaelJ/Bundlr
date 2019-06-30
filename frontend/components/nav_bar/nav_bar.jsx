@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { openModal } from '../../actions/ui/modal_actions';
+
 
 class NavBar extends React.Component {
 
@@ -51,12 +53,14 @@ class NavBar extends React.Component {
           </li>
 
           <li>
-            <Link to={"/"}><i className="far fa-edit"></i></Link>
+            <Link to={"/"}><i className="far fa-edit" onClick={() => openModal("")}></i></Link>
           </li>
           <li>
             <button className="header-button" onClick={this.logout}>Log Out</button>
           </li>
         </ul>
+
+
       </div>
     );
 

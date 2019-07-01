@@ -13,47 +13,18 @@ class PostOptionsDisplayBar extends React.Component {
 
     const PostOptions = (
       <section className="post_options_buttons">
-        <div className="post_options_buttons_box">
-          <Link to="/" className="post_options_icon">
-            <span className="dashboard_nav_text">Aa</span>
-          </Link>
-          <label className="dashboard_text_label">Text</label>
-        </div>
-
-        <div className="post_options_buttons_box">
-          <Link to="/" className="post_options_icon">
-            <i className="fas fa-camera-retro" />
-          </Link>
-          <label className="dashboard_text_label">Picture</label>
-        </div>
-
-        <div className="post_options_buttons_box">
-          <Link to="/" className="post_options_icon">
-            <i className="fas fa-quote-left" />
-          </Link>
-          <label className="dashboard_text_label">Quote</label>
-        </div>
-
-        <div className="post_options_buttons_box">
-          <Link to="/" className="post_options_icon">
-            <i className="fas fa-link" />
-          </Link>
-          <label className="dashboard_text_label">Link</label>
-        </div>
-
-        <div className="post_options_buttons_box">
-          <Link to="/" className="post_options_icon">
-            <i className="fas fa-headphones-alt" />
-          </Link>
-          <label className="dashboard_text_label">Audio</label>
-        </div>
-
-        <div className="post_options_buttons_box">
-          <Link to="/" className="post_options_icon">
-            <i className="fas fa-video" />
-          </Link>
-          <label className="dashboard_text_label">Video</label>
-        </div>
+        <li onClick={() => this.props.openModal('Text Post Form')}>
+          <div><p className="post_button text">Aa</p><span>Text</span></div>
+        </li>
+        <li onClick={() => this.props.openModal('Photo Post Form')}>
+          <div><i className="post_button fas fa-camera"></i><span>Photo</span></div>
+        </li>
+        <li onClick={() => this.props.openModal('Quote Post Form')}>
+          <div><i className="post_button fas fa-quote-right"></i><span>Quote</span></div>
+        </li>
+        <li onClick={() => this.props.openModal('Link Post Form')}>
+          <div><i className="post_button fas fa-link"></i><span>Link</span></div>
+        </li>
       </section>
     );
 

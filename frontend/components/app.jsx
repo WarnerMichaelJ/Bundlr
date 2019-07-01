@@ -15,6 +15,8 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 
 import PostOptionsDisplayBar from './post_options_display_bar/post_options_display_bar_container';
 
+import Modal from './modal/modal';
+
 import {
   Route,
   Redirect,
@@ -27,6 +29,7 @@ import {
 const App = () => {
   return (
     <div>
+      <Modal /> 
       <NavBarContainer />
       <PostOptionsDisplayBar />
       <Switch>

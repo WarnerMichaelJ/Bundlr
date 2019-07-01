@@ -24,15 +24,15 @@ class TextForm extends React.Component {
 
     return (
       <div className="text_post_form_container">
-        <form onSubmit={this.handleSubmit}>
-          <input
+        <form className="the_actual_text_post_form" onSubmit={this.handleSubmit}>
+          <input className="title-input-text_post_form_container"
             type="text"
             value={this.state.title}
             onChange={this.handleInput("title")}
             placeholder="Title"
           />
 
-          <input
+          <textarea className="body-input-text_post_form_container"
             type="text"
             value={this.state.body}
             onChange={this.handleInput("body")}

@@ -1,3 +1,26 @@
 .text_post_form_container {
-  
+
+}
+
+.the_actual_text_post_form {
+  min-height: 80px;
+  line-height: 21px;
+  word-wrap: break-word;
+  width: 500px;
+
+}
+
+.title-input-text_post_form_container {
+  min-height: 47px;
+  font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 47px;
+}
+
+.body-input-text_post_form_container {
+  margin-bottom: 0;
+  line-height: 21px;
+  word-wrap: break-word;
+  width: 500px;
 }

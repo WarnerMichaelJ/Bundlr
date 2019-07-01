@@ -12,6 +12,9 @@ import TextPostForm from '../posts/forms/text_post_form_container';
 
 import QuotePostForm from '../posts/forms/create_quote_form_container';
 
+import LinkPostForm from '../posts/forms/link_post_form_container';
+
+import PopupCirclesPostOptions from '../create_posts_popup_circles/create_posts_popup_circles_container';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -26,6 +29,12 @@ function Modal({ modal, closeModal }) {
       break;
     case 'Quote Post Form':
       component = <QuotePostForm />;
+      break;
+    case 'Link Post Form':
+      component = <LinkPostForm />;
+      break;
+    case 'render post creation circles':
+      component = <PopupCirclesPostOptions />;
       break;
     case 'Yada Yada Case from post_options_display_bar':
       component = "Put another container in here";

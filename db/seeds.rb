@@ -6,9 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.delete_all
+require 'open-uri'
 
-User.create(username: 'Luka_Doncic', email: "Luka@gmail.com", password: '123456')
+
+
+User.delete_all
+Post.delete_all
+
+user_1 = User.create(username: 'Luka_Doncic', email: "Luka@gmail.com", password: '123456')
 User.create(username: 'Lebron_James', email: "Lebron@gmail.com", password: '123456')
 User.create(username: 'Steve_Nash', email: "Nash@gmail.com", password: '123456')
 User.create(username: 'Zion_Williamson', email: "zion@gmail.com", password: '123456')
@@ -16,4 +21,23 @@ User.create(username: 'Stephen_Curry', email: "ChefCurry@gmail.com", password: '
 User.create(username: 'Michael_Jordan', email: "Jordanesque@gmail.com", password: '123456')
 User.create(username: 'Jaren_Jackson_Jr', email: "JJJ@gmail.com", password: '123456')
 User.create(username: 'Allen_Iverson', email: "Iverson@gmail.com", password: '123456')
+
+post_1 = Post.create(title: "Jaren Jackson Career High", author_id: user_1.id)
+# Post.create(title: "Second Photo")
+# Post.create(title: "Third Photo")
+# Post.create(title: "Fourth Photo")
+# Post.create(title: "Fifth Photo")
+
+file = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Jr.jpg')
+post_1.photo.attach(io: file, filename: 'jaren_jackson.jpg')
+
+
+post_2 = Post.create(title: "Luka Magic", author_id: user_1.id)
+file_2 = open('https://bundlr-dev.s3.amazonaws.com/eeGoWNuN6mpZP5csUZrKP7KR')
+post_2.photo.attach(io: file_2, filename: 'Luka_Image.jpg')
+
+
+post_3 = Post.create(title: "Classic Memphis cuisine right here", author_id: user_1.id)
+file_3 = open('https://bundlr-dev.s3.amazonaws.com/Pulled_pork_memphis_cuisine.jpg')
+post_3.photo.attach(io: file_3, filename: 'Classic Memphis Meal')
 

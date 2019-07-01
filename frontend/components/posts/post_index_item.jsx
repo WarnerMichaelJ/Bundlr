@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const PostIndexItem = ({ post, deletePost }) => (
 
-  <li>
+  <li className="post_index_list_item">
     {post.title}
     <br />
     {post.body}
     <br />
-    <img src={window.images.doncic_picture} /> 
+    <img className="post_index_item_image" src={post.imageUrl} /> 
   </li>
 );
 

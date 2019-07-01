@@ -41,6 +41,7 @@ const App = () => {
 
         <AuthRoute exact path="/" component={GreetingContainer} />
 
+
       </Switch>
 
     </div>

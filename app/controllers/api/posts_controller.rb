@@ -48,7 +48,8 @@ class Api::PostsController < ApplicationController
   def index 
     @posts = Post.all
 
-    render json: @posts 
+    # render json: @posts 
+    render :index
     #There will come a day
     #Where I will likely modify this so it doesn't render all the json info
     #But it is not this day

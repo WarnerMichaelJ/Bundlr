@@ -39,7 +39,7 @@ class PostIndex extends React.Component {
     return (
       <div className="post_index_parent_div">
 
-        <ul>
+        <ul className="post_index_unordered_list">
           {posts}
         </ul>
       </div>

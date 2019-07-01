@@ -65,7 +65,7 @@ class NavBar extends React.Component {
 
     const loggedOutNavBar = (
       <header>
-        <Link to="/" className="header-link">
+        <Link to="/login" className="header-link">
           <h1><i className="fas fa-file-archive"></i></h1>
         </Link>
       </header>

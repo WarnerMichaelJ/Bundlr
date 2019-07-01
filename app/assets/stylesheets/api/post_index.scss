@@ -4,20 +4,39 @@
 .post_index_parent_div {
   // background-color: #001935;
   color: black;
+  width: 50vw;
 
 }
 
 .post_index_unordered_list {
-
+  margin: 0 0 0 200px;
+  list-style: none;
 }
 
 .post_index_item_image {
   vertical-align: middle;
-  width: 50%;
+  width: 100%;
   min-width: 50%;
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .post_index_list_item {
-  
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  outline: 0;
+  outline-style: none;
+  outline-width: 0;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  width: 540px;
+  border-radius: 3px;
+}
+
+.post-title-text {
+  height: 50px;
 }

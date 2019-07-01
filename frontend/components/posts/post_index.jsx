@@ -31,7 +31,7 @@ class PostIndex extends React.Component {
           post={post}
           key={post.id}
           deletePost={this.props.deletePost}
-          
+          currentUser={this.props.currentUser}
         />
       );
     });
@@ -39,9 +39,9 @@ class PostIndex extends React.Component {
     return (
       <div className="post_index_parent_div">
 
-        <ul className="post_index_unordered_list">
+        <ol className="post_index_unordered_list">
           {posts}
-        </ul>
+        </ol>
       </div>
     );
   }

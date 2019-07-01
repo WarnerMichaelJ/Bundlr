@@ -12,7 +12,7 @@ class PopupCirclesPostOptions extends React.Component {
   render() {
 
     const PopupCircles = (
-      <section className="post_options_circles">
+      <ul className="post_options_circles">
         <li onClick={() => this.props.openModal('Text Post Form')}>
           <div><p className="post_circle text">Aa</p><span>Text</span></div>
         </li>
@@ -25,7 +25,7 @@ class PopupCirclesPostOptions extends React.Component {
         <li onClick={() => this.props.openModal('Link Post Form')}>
           <div><i className="post_circle fas fa-link"></i><span>Link</span></div>
         </li>
-      </section>
+      </ul>
     );
 
     return PopupCircles;

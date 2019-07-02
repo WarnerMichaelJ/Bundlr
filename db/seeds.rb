@@ -14,12 +14,12 @@ User.delete_all
 Post.delete_all
 
 user_1 = User.create(username: 'Luka_Doncic', email: "Luka@gmail.com", password: '123456')
+user_2 = User.create(username: 'Jaren_Jackson_Jr', email: "JJJ@gmail.com", password: '123456')
 User.create(username: 'Lebron_James', email: "Lebron@gmail.com", password: '123456')
 User.create(username: 'Steve_Nash', email: "Nash@gmail.com", password: '123456')
 User.create(username: 'Zion_Williamson', email: "zion@gmail.com", password: '123456')
 User.create(username: 'Stephen_Curry', email: "ChefCurry@gmail.com", password: '123456')
 User.create(username: 'Michael_Jordan', email: "Jordanesque@gmail.com", password: '123456')
-User.create(username: 'Jaren_Jackson_Jr', email: "JJJ@gmail.com", password: '123456')
 User.create(username: 'Allen_Iverson', email: "Iverson@gmail.com", password: '123456')
 
 post_1 = Post.create(title: "Congrats Jaren on your career high! Bright future in Memphis", author_id: user_1.id)
@@ -52,4 +52,32 @@ post_5.photo.attach(io: file_5, filename: 'night time skyline')
 post_6 = Post.create(title: "Great to workout in the summer in NYC", author_id: user_1.id)
 file_6 = open('https://bundlr-dev.s3.amazonaws.com/new_york_city.jpg')
 post_6.photo.attach(io: file_6, filename: 'NYC skyline')
+
+profile_picture_1 = open('https://bundlr-dev.s3.amazonaws.com/eeGoWNuN6mpZP5csUZrKP7KR')
+
+user_1.profile_picture.attach(io: profile_picture_1, filename: 'Profile Pic Luka')
+
+
+#still working on this. Add Jaren's profile picture to AWS
+
+profile_picture_2 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Jaren_smiling_profile_picture.jpg')
+
+user_2.profile_picture.attach(io: profile_picture_2, filename: 'Profile Pic Jaren Smiling')
+
+
+post_7 = Post.create(title: "Great working out with you KG!", author_id: user_2.id)
+file_7 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Garnett_And_Jaren_After_Workout.jpg')
+post_7.photo.attach(io: file_7, filename: 'Jaren and KG')
+
+
+post_8 = Post.create(title: "Dear Memphis coaching staff: Let. Me. Shoot. More. Threes.PLEASE", author_id: user_2.id)
+file_8 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Let_Me_Shoot_More_Threes.jpg')
+post_8.photo.attach(io: file_8, filename: 'Jaren Shooting A Three')
+
+post_9 = Post.create(title: "Welcome to Memphis Ja! We're about to be TROUBLE next season", author_id: user_2.id)
+file_9 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Jaren_and_Ja_Shoutout.jpg')
+post_9.photo.attach(io: file_9, filename: 'Jaren Shouting Out Ja Morant')
+
+#Add an association of has one photo to the user model as well
+#I called it profile_picture instead of photo just as a heads up 
 

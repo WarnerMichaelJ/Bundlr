@@ -46,8 +46,8 @@ class Api::PostsController < ApplicationController
   end
 
   def index 
-    @posts = Post.all
-
+    @posts = Post.all.includes(:user)
+    
     # render json: @posts 
     render :index
     #There will come a day

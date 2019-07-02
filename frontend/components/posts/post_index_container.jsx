@@ -6,10 +6,13 @@ import PostIndex from './post_index';
 
 const msp = state => {
   let posts = Object.values(state.entities.posts);
-  let currentUser = state.entities.users[state.session.id]["username"];
+  let currentUser = state.entities.users[state.session.id];
+  let posters = state.entities.users;
+
   return {
     posts,
-    currentUser
+    currentUser,
+    posters
   };
 };
 

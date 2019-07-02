@@ -24,14 +24,15 @@ class PostIndex extends React.Component {
   render () {
 
     if (!this.props.posts) return null;
-
+    let posters = this.props.posters;
     let posts = this.props.posts.map(post => {
+
       return (
         <PostIndexItem 
           post={post}
           key={post.id}
           deletePost={this.props.deletePost}
-          currentUser={this.props.currentUser}
+          postAuthor={posters[post.author_id]}
         />
       );
     });

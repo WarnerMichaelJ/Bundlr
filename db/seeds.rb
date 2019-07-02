@@ -22,19 +22,19 @@ User.create(username: 'Stephen_Curry', email: "ChefCurry@gmail.com", password: '
 User.create(username: 'Michael_Jordan', email: "Jordanesque@gmail.com", password: '123456')
 User.create(username: 'Allen_Iverson', email: "Iverson@gmail.com", password: '123456')
 
-post_1 = Post.create(title: "Congrats Jaren on your career high! Bright future in Memphis", author_id: user_1.id)
 # Post.create(title: "Second Photo")
 # Post.create(title: "Third Photo")
 # Post.create(title: "Fourth Photo")
 # Post.create(title: "Fifth Photo")
 
-file = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Jr.jpg')
-post_1.photo.attach(io: file, filename: 'jaren_jackson.jpg')
 
+post_1 = Post.create(title: "So happy to be a part of the Mavs organization", author_id: user_1.id)
+file_1 = open('https://bundlr-dev.s3.amazonaws.com/eeGoWNuN6mpZP5csUZrKP7KR')
+post_1.photo.attach(io: file_1, filename: 'Luka_Image.jpg')
 
-post_2 = Post.create(title: "So happy to be a part of the Mavs organization", author_id: user_1.id)
-file_2 = open('https://bundlr-dev.s3.amazonaws.com/eeGoWNuN6mpZP5csUZrKP7KR')
-post_2.photo.attach(io: file_2, filename: 'Luka_Image.jpg')
+post_2 = Post.create(title: "Congrats Jaren on your career high! Bright future in Memphis", author_id: user_1.id)
+file_2 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Jr.jpg')
+post_2.photo.attach(io: file_2, filename: 'jaren_jackson.jpg')
 
 
 post_3 = Post.create(title: "Great meal after another Mavs win", author_id: user_1.id)

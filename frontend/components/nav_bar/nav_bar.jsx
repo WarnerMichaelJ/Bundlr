@@ -39,7 +39,7 @@ class NavBar extends React.Component {
           </li>
 
           <li>
-            <Link to={"/"}><i className="far fa-compass"></i></Link>
+            <Link className="compass-styling" to={"/trendingposts"}><i className="far fa-compass"></i></Link>
           </li>
 
           {/* <li>

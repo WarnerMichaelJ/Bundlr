@@ -15,6 +15,8 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 
 import PostOptionsDisplayBar from './post_options_display_bar/post_options_display_bar_container';
 
+import TrendingPosts from './posts/trending_posts/trending_posts_index_container';
+
 import Modal from './modal/modal';
 
 import {
@@ -38,6 +40,8 @@ const App = () => {
 
 
         <ProtectedRoute exact path="/posts" component={PostIndexContainer} />
+
+        <ProtectedRoute exact path="/trendingposts" component={TrendingPosts} />
 
         <AuthRoute exact path="/" component={GreetingContainer} />
 

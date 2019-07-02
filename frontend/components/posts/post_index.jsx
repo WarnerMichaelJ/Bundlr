@@ -33,6 +33,8 @@ class PostIndex extends React.Component {
           key={post.id}
           deletePost={this.props.deletePost}
           postAuthor={posters[post.author_id]}
+          createLike={this.props.createLike}
+          removeLike={this.props.removeLike}
         />
       );
     });
@@ -50,3 +52,4 @@ class PostIndex extends React.Component {
 }
 
 export default PostIndex;
+

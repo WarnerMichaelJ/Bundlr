@@ -5,6 +5,8 @@ import * as BlogUtil from './util/blog_util';
 import * as BlogThunkActions from './actions/blog_actions';
 import * as PostUtil from './util/post_util';
 
+import * as LikeUtil from './util/like_util';
+
 import * as PostThunkActions from './actions/post_actions';
 
 import Root from './components/root';
@@ -26,8 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.store = store; 
-  window.PostThunkActions = PostThunkActions;
-  window.PostUtil = PostUtil;
+  window.LikeUtil = LikeUtil;
+  // window.PostThunkActions = PostThunkActions;
+  // window.PostUtil = PostUtil;
   // window.BlogThunkActions = BlogThunkActions;
   // window.BlogUtil = BlogUtil;
   window.logout = APIUtil.logout;

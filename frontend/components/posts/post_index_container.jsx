@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { fetchPost, createPost, updatePost, deletePost, fetchPosts } from '../../actions/post_actions';
 import PostIndex from './post_index';
 
-
+import { createLike, removeLike } from "../../actions/like_actions";
 
 const msp = state => {
   let posts = Object.values(state.entities.posts);
@@ -23,6 +23,8 @@ const mdp = dispatch => {
     updatePost: (post) => dispatch(updatePost(post)),
     deletePost: (postId) => dispatch(deletePost(postId)),
     fetchPosts: () => dispatch(fetchPosts()),
+    createLike: (postId) => dispatch(createLike(postId)),
+    removeLike: (likeId) => dispatch(removeLike(likeId)),
   };
 };
 

@@ -14,7 +14,9 @@ end
 json.posts do 
   @posts.each do |post| 
     json.set! post.id do 
-      json.extract! post, :title, :body, :author_id, :content_type  
+      json.extract! post, :title, :body, :author_id, :content_type, :id 
+
+
       if post.photo.attached? 
         json.imageUrl url_for(post.photo)
       end

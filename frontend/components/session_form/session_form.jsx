@@ -57,7 +57,6 @@ class SessionForm extends React.Component {
           className="login-input"
           placeholder="Email"
         />
-        <br />
     </label> ) : null;
 
     const demoLogIn = this.props.formType === 'Log in' ? (
@@ -75,10 +74,8 @@ class SessionForm extends React.Component {
           <div className="login-form-container">
               <form onSubmit={this.handleSubmit} className="login-form-box">
                 <h1 className="Bundlr-Big-Text"> bundlr </h1>
-                <br />
                 {this.renderErrors()}
                 <div className="login-form">
-                  <br />
                   {email}
                   <label>
                     <input type="text"
@@ -88,7 +85,6 @@ class SessionForm extends React.Component {
                       placeholder="Username"
                     />
                   </label>
-                  <br />
                   <label>
                     <input type="password"
                       value={this.state.password}
@@ -97,7 +93,6 @@ class SessionForm extends React.Component {
                       placeholder="Password"
                     />
                   </label>
-                  <br />
                   <input className="session-submit" type="submit" value={this.props.formType} />
                   {demoLogIn}
                 </div>

@@ -29,30 +29,21 @@
 
 
 
-input {
-  width: 100%;
-  padding: 11px 10px 11px 13px;
-  display: block;
-  margin: 0;
-  border: none;
-  background: white;
-  font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  box-sizing: border-box;
-  cursor: pointer
-}
-
 
 .Bundlr-Big-Text {
+  text-align: center;
   font-family: Georgia;
   color: white;
   font-size: 60px; 
   font-weight: 700;
   z-index: 0;
+  margin-bottom: 10px;
 }
 
 .login-form-container {
   animation: fadeIn 2s;
   position: absolute;
+  width: 300px;
   top:  50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -86,6 +77,9 @@ input {
 .session-submit {
   color: white; 
   background: #33CCFF;
+  height: 45px;
+  width: 100%;
+  margin: 12px 0 0 0;
 }
 
 
@@ -128,4 +122,15 @@ input {
   padding-left: 13px;
   padding-right: 13px;
   display: inline-block;
+}
+
+.login-input {
+  width: 100%;
+  padding: 11px 10px 11px 13px;
+  display: block;
+  margin: 0;
+  border: none;
+  background-color:white;
+  font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
 }

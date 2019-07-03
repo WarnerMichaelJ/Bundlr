@@ -9,6 +9,7 @@ class PostIndexItem extends React.Component {
     
     this.state = { liked: false };
     this.handleLike = this.handleLike.bind(this);
+    this.handleUnlike = this.handleUnlike.bind(this);
   }
 
   componentDidMount() {
@@ -26,7 +27,25 @@ class PostIndexItem extends React.Component {
       });
     });
   }
-  
+
+  handleUnlike(event) {
+    event.preventDefault();
+    let likeId;
+    let likes = Object.values(this.props.post.likes);
+    
+
+    likes.forEach((like) => {
+      if (like.user_id === this.props.currentUser.id) {
+        likeId = like.id;
+      }
+    });
+
+    this.props.removeLike(likeId).then(() => {
+      this.setState({
+        liked: false
+      });
+    });
+  }
   render() {
     
    
@@ -35,7 +54,7 @@ class PostIndexItem extends React.Component {
   let heart;
 
   if (this.state.liked) {
-    heart = <i className="fas red fa-heart" color="red" onClick={() => removeLike()}></i>;
+    heart = <i className="fas red fa-heart" onClick={this.handleUnlike}></i>;
   } else {
     heart = <i className="far fa-heart" onClick={this.handleLike}></i>;
   }

@@ -10,6 +10,7 @@ class PostOptionsDisplayBar extends React.Component {
   }
 
   render () {
+    if (!this.props.currentUser) return null;
 
     const PostOptions = (
       <div className="post_options_with_profile_pic_container">

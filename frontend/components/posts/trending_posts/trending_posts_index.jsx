@@ -10,12 +10,11 @@ class TrendingPosts extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = this.props.posts;
   }
 
   componentDidMount() {
     this.props.fetchPosts();
-
+    
   }
 
 

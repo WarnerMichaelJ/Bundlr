@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { Link } from 'react-router-dom';
 
+import PostOptionsDisplayBar from '../post_options_display_bar/post_options_display_bar_container';
 
 import PostIndexItem from './post_index_item';
 
@@ -41,7 +42,7 @@ class PostIndex extends React.Component {
     
     return (
       <div className="post_index_parent_div">
-
+        <PostOptionsDisplayBar />
         <ol className="post_index_unordered_list">
           {posts}
         </ol>

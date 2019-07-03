@@ -22,7 +22,7 @@ const PostIndexItem = ({ post, currentUser, postAuthor, deletePost, createLike, 
       <h3 className="post-body-text">{post.body}</h3>
       <br />
       <div className="fa-heart-flex-container">
-      <i className="far fa-heart" onClick={() => createLike(post.id)}></i>
+      <i className="far post-index fa-heart" onClick={() => createLike(post.id)}></i>
       </div>
     </li>
   </div>

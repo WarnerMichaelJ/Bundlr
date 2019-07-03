@@ -23,7 +23,7 @@ class NavBar extends React.Component {
       <div className="nav-bar-parent-div">
 
         <div className="logo-and-search-container">
-          <Link to="/posts">
+          <Link className="logo" to="/posts">
             <i className="fas fa-file-archive"></i>
           </Link>
 

@@ -10,7 +10,7 @@ const TrendingPostIndexItem = ({ post, currentUser, postAuthor, deletePost, crea
   return (
     <div className="trending_index_item_container">
       <li className="trending_index_list_item">
-        <p>{postAuthor.username}</p>
+        <p className="postAuthor-username">{postAuthor.username}</p>
         <br />
         <img className="trending_index_item_image" src={post.imageUrl} />
         <br />

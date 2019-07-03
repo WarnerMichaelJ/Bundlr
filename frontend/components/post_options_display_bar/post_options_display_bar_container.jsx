@@ -4,9 +4,13 @@ import PostOptionsDisplayBar from './post_options_display_bar';
 import { openModal } from '../../actions/ui/modal_actions';
 
 
-const msp = state => ({
-  currentUser: state.session.id
-});
+const msp = state => {
+  let currentUser = state.entities.users[state.session.id];
+  // debugger; 
+  return {
+  currentUser
+  };
+};
 
 const mdp = dispatch => ({
   openModal: modal => dispatch(openModal(modal))

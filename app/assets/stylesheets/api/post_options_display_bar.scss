@@ -3,19 +3,46 @@
   position: relative;
   display: flex;
   justify-content: flex-start;
-  margin-top: 30px;
-  width: 300px;
-  height: 30px;
+  margin-top: 0;
+  width: 540px;
+  height: 85px;
   font-size: 25px;
   background-color: white;
   border-radius: 3px;
   list-style: none;
   cursor: pointer;
   /* margin: 0 0 0 200px; */
-  margin-left: 200px;
-  margin-bottom: 20px;
+  margin-left: 0;
+  margin-bottom: 0px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 
 
+.fas.fa-camera {
+  color: #ff492f;
+}
 
+.fas.fa-quote-right {
+  color: #ff8a00;
+}
+
+.fas.fa-link {
+  color: #00cf35;
+}
+
+.post_options_with_profile_pic_container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-bottom: 30px;
+}
+
+.user_profile_pic_image {
+  height: 66px;
+  width: 66px;
+  margin-right: 20px;
+  border-radius: 4px;
+}

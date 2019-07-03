@@ -13,7 +13,7 @@ const PostIndexItem = ({ post, currentUser, postAuthor, deletePost, createLike, 
       <img className="user_profile_pic_image" src={postAuthor.profilePicture} />
     </div>
     <li className="post_index_list_item">
-      <p>{postAuthor.username}</p>
+      <p className="postAuthor-username">{postAuthor.username}</p>
       <br />
       <img className="post_index_item_image" src={post.imageUrl} /> 
       <br />
@@ -21,7 +21,9 @@ const PostIndexItem = ({ post, currentUser, postAuthor, deletePost, createLike, 
 
       <h3 className="post-body-text">{post.body}</h3>
       <br />
+      <div className="fa-heart-flex-container">
       <i className="far fa-heart" onClick={() => createLike(post.id)}></i>
+      </div>
     </li>
   </div>
   );

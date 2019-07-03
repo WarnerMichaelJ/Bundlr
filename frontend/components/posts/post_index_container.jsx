@@ -5,6 +5,7 @@ import PostIndex from './post_index';
 import { createLike, removeLike } from "../../actions/like_actions";
 
 const msp = state => {
+  // debugger; 
   let posts = Object.values(state.entities.posts);
   let currentUser = state.entities.users[state.session.id];
   let posters = state.entities.users;

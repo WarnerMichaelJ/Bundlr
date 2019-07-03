@@ -1,4 +1,14 @@
 
+.logo {
+  color: white; 
+  font-size: 20px;
+}
+
+.header-link {
+  color: white;
+  font-size: 20px;
+}
+
 .nav-bar-ul {
   width: 100vw;
   display: flex;
@@ -15,6 +25,10 @@
 .search-bar-input {
   width: 500px;
   margin-left: 20px;
+  font-size: 15px;
+  height: 34px;
+  border-radius: 3px;
+  font-family: Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
 }
 
 .nav-bar-parent-div {
@@ -43,8 +57,10 @@
 .fa-edit {
   cursor: pointer;
   color: white; 
+  opacity: .65;
 }
 
 .compass-styling {
   color: white;
+  opacity: .65;
 }

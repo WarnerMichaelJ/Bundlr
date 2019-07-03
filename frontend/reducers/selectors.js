@@ -9,3 +9,4 @@ export const likedPostIds = (state) => {
 
   return postIds;
 };
+

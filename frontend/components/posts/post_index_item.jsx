@@ -54,9 +54,9 @@ class PostIndexItem extends React.Component {
   let heart;
 
   if (this.state.liked) {
-    heart = <i className="fas red fa-heart" onClick={this.handleUnlike}></i>;
+    heart = <i className="fas red post-index fa-heart" onClick={this.handleUnlike}></i>;
   } else {
-    heart = <i className="far fa-heart" onClick={this.handleLike}></i>;
+    heart = <i className="far red post-index fa-heart" onClick={this.handleLike}></i>;
   }
 
   return (

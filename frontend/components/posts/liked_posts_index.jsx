@@ -1,12 +1,13 @@
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import PostIndexItem from './post_index_item';
 
 
-import TrendingPostIndexItem from './trending_posts_index_item';
 
-class TrendingPosts extends React.Component {
+class LikedPostsIndex extends React.Component {
   constructor(props) {
     super(props);
 
@@ -22,23 +23,21 @@ class TrendingPosts extends React.Component {
 
     if (!this.props.posts) return null;
     let posters = this.props.posters;
-   
-    let postsCount = {};
 
-    let selectedPosts = [];
-    
-    this.props.posts.forEach(post => {
-      if (!postsCount[post.author_id]) {
-        selectedPosts.push(post);
-        postsCount[post.author_id] = 1;
+ 
+
+    let likedPosts = [];
+
+    this.props.posts.forEach((post) => {
+      if (this.props.likedIds.includes(post.id)) {
+        likedPosts.push(post);
       }
-      
     });
 
-    let selectedPostsFromEachUser = selectedPosts.map(post => {
+    let posts = likedPosts.map(post => {
 
       return (
-        <TrendingPostIndexItem
+        <PostIndexItem
           post={post}
           key={post.id}
           deletePost={this.props.deletePost}
@@ -52,10 +51,10 @@ class TrendingPosts extends React.Component {
     });
 
     return (
-      <div className="trending_posts_index_parent_div">
+      <div className="post_index_parent_div">
 
-        <ol className="trending_posts_unordered_list">
-          {selectedPostsFromEachUser}
+        <ol className="post_index_unordered_list">
+          {posts}
         </ol>
       </div>
     );
@@ -63,5 +62,4 @@ class TrendingPosts extends React.Component {
 
 }
 
-export default TrendingPosts;
-
+export default LikedPostsIndex;

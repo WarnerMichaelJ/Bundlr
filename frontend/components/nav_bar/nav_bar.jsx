@@ -39,7 +39,7 @@ class NavBar extends React.Component {
           </li>
 
           <li>
-            <Link to={"/"}><i id="nav-heart" className="fas nav fa-heart"></i></Link>
+            <Link className="liked" to={"/liked"}><i id="nav-heart" className="fas nav fa-heart"></i></Link>
           </li>
 
           <li>

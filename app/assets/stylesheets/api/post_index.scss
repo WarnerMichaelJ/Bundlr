@@ -56,7 +56,25 @@
 }
 
 
-.far.post-index.fa-heart {
+// .far.post-index.fa-heart {
+//   cursor: pointer;
+//   font-size: 24px; 
+//   // display: flex-end;
+//   // padding-left: 500px;
+//   padding-bottom: 10px;
+//   left: 90%;
+// }
+
+.fas.red.post-index.fa-heart {
+  cursor: pointer;
+  font-size: 24px; 
+  // display: flex-end;
+  // padding-left: 500px;
+  padding-bottom: 10px;
+  left: 90%;
+}
+
+.far.red.post-index.fa-heart {
   cursor: pointer;
   font-size: 24px; 
   // display: flex-end;

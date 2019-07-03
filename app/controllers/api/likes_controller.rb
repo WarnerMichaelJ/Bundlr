@@ -1,13 +1,19 @@
 class Api::LikesController < ApplicationController
 
+  def index 
+    @likes = current_user.likes 
+
+    render json: @likes
+  end
+
   def create
     @like = Like.new
     @like.user_id = current_user.id
     
     @like.post_id = params[:postId]  #The postId is being sent down in the params
     #This is happening through the ajax request's   data: { postId }
+    @post = Post.find(params[:postId])
     
-    # debugger 
     if @like.save
       render :show 
     else
@@ -17,12 +23,15 @@ class Api::LikesController < ApplicationController
 
 
   def destroy
-
+    
     @like = Like.where(user_id: current_user.id).find(params[:id])
+    # @like = Like.where(user_id:  current_user.id, post_id: params[:postId]) 
+    
+    
     if @like
       @like.destroy!
       @post = Post.find(@like.post_id)
-      render '/api/posts'
+      render :show 
     else
       render json: ['unlike did not process'], status: 422
     end

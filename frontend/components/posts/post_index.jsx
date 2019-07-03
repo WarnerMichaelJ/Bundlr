@@ -13,12 +13,11 @@ class PostIndex extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = this.props.posts; 
   }
 
   componentDidMount() {
     this.props.fetchPosts();
-
+    this.props.fetchLikes();
   }
 
 
@@ -36,6 +35,7 @@ class PostIndex extends React.Component {
           postAuthor={posters[post.author_id]}
           createLike={this.props.createLike}
           removeLike={this.props.removeLike}
+          likedIds={this.props.likedIds}
         />
       );
     });

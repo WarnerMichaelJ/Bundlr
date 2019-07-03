@@ -3,7 +3,63 @@ import { Link } from 'react-router-dom';
 
 
 
-const TrendingPostIndexItem = ({ post, currentUser, postAuthor, deletePost, createLike, removeLike }) => {
+class TrendingPostIndexItem extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {liked: false };
+    this.handleLike = this.handleLike.bind(this);
+    this.handleUnlike = this.handleUnlike.bind(this);
+  }
+
+  componentDidMount() {
+
+    if (this.props.likedIds.includes(this.props.post.id)) {
+      this.setState({liked: true});
+    }
+  }
+
+  handleLike(event) {
+    event.preventDefault();
+    this.props.createLike(this.props.post.id).then(() => {
+      this.setState({
+        liked: true
+      });
+    });
+  }
+
+  handleUnlike(event) {
+    event.preventDefault();
+    let likeId;
+    let likes = Object.values(this.props.post.likes);
+
+    
+    likes.forEach((like) => {
+      if (like.user_id === this.props.currentUser.id) {
+        likeId = like.id;
+      }
+    });
+    
+    this.props.removeLike(likeId).then(() => {
+      this.setState({
+        liked: false
+      });
+    });
+    
+  }
+
+  render( ) {
+
+  const { post, currentUser, postAuthor, deletePost, createLike, removeLike } = this.props; 
+
+  let heart;
+// Will likely have to refactor removeLike so it's not depending on the like id being passed in
+  if (this.state.liked) {
+    heart = <i className="fas red fa-heart" color="red" onClick={this.handleUnlike}></i>;
+  } else {
+    heart = <i className="far fa-heart" onClick={this.handleLike}></i>;
+  }
 
 
 
@@ -18,10 +74,12 @@ const TrendingPostIndexItem = ({ post, currentUser, postAuthor, deletePost, crea
 
         <h3 className="trending-body-text">{post.body}</h3>
         <br />
-        <i className="far fa-heart" onClick={() => createLike(post.id)}></i>
+        {heart}
       </li>
     </div>
   );
-};
+  }
+}
+
 
 export default TrendingPostIndexItem;

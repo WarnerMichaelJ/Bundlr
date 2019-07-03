@@ -3,9 +3,42 @@ import { Link } from 'react-router-dom';
 
 
 
-const PostIndexItem = ({ post, currentUser, postAuthor, deletePost, createLike, removeLike }) => {
-  
+class PostIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = { liked: false };
+    this.handleLike = this.handleLike.bind(this);
+  }
 
+  componentDidMount() {
+    
+    if (this.props.likedIds.includes(this.props.post.id)) {
+      this.setState({ liked: true });
+    }
+  }
+  
+  handleLike(event) {
+    event.preventDefault();
+    this.props.createLike(this.props.post.id).then(() => {
+      this.setState({
+        liked: true
+      });
+    });
+  }
+  
+  render() {
+    
+   
+  const { post, currentUser, postAuthor, deletePost, createLike, removeLike } = this.props; 
+
+  let heart;
+
+  if (this.state.liked) {
+    heart = <i className="fas red fa-heart" color="red" onClick={() => removeLike()}></i>;
+  } else {
+    heart = <i className="far fa-heart" onClick={this.handleLike}></i>;
+  }
 
   return (
   <div className="index_item_container">
@@ -22,11 +55,13 @@ const PostIndexItem = ({ post, currentUser, postAuthor, deletePost, createLike, 
       <h3 className="post-body-text">{post.body}</h3>
       <br />
       <div className="fa-heart-flex-container">
-      <i className="far post-index fa-heart" onClick={() => createLike(post.id)}></i>
+      {heart}
       </div>
     </li>
   </div>
   );
-};
+
+  }
+}
 
 export default PostIndexItem;

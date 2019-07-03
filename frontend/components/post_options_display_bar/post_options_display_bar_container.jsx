@@ -6,7 +6,7 @@ import { openModal } from '../../actions/ui/modal_actions';
 
 const msp = state => {
   let currentUser = state.entities.users[state.session.id];
-  // debugger; 
+  
   return {
   currentUser
   };

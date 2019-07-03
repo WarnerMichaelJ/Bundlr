@@ -3,6 +3,9 @@ import {
   REMOVE_POST,
   RECEIVE_POSTS
 } from '../actions/post_actions';
+
+import { RECEIVE_LIKE } from '../actions/like_actions';
+
 import merge from 'lodash/merge';
 
 const postsReducer = (oldState = {}, action) => {
@@ -10,6 +13,9 @@ const postsReducer = (oldState = {}, action) => {
   let newState;
   
   switch (action.type) {
+    case RECEIVE_LIKE:
+     
+      return merge({}, oldState, {[action.payload.post.id]: action.payload.post});
     case RECEIVE_POSTS:
 
       return merge({}, oldState, action.posts.posts);

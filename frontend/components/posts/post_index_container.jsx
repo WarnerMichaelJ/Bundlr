@@ -2,18 +2,20 @@ import { connect } from 'react-redux';
 import { fetchPost, createPost, updatePost, deletePost, fetchPosts } from '../../actions/post_actions';
 import PostIndex from './post_index';
 
-import { createLike, removeLike } from "../../actions/like_actions";
+import { createLike, removeLike, fetchLikes } from "../../actions/like_actions";
+import { likedPostIds } from '../../reducers/selectors';
 
 const msp = state => {
-  // debugger; 
+  
   let posts = Object.values(state.entities.posts);
   let currentUser = state.entities.users[state.session.id];
   let posters = state.entities.users;
-
+  let likedIds = likedPostIds(state);
   return {
     posts,
     currentUser,
-    posters
+    posters,
+    likedIds
   };
 };
 
@@ -26,6 +28,7 @@ const mdp = dispatch => {
     fetchPosts: () => dispatch(fetchPosts()),
     createLike: (postId) => dispatch(createLike(postId)),
     removeLike: (likeId) => dispatch(removeLike(likeId)),
+    fetchLikes: () => dispatch(fetchLikes()),
   };
 };
 

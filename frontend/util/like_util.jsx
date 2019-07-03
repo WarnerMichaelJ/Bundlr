@@ -7,11 +7,28 @@ export const createLike = postId => {
   });
 };
 
+// export const removeLike = postId => {
+//   // debugger
+//   return $.ajax({
+//     method: 'delete',
+//     url: `api/likes/${likeId}`,
+//     data: { postId }
+//   });
+
+// };
+
 export const removeLike = likeId => {
-  // debugger
+  
   return $.ajax({
     method: 'delete',
-    url: `api/likes/${likeId}`,
+    url: `api/likes/${likeId}`
   });
 
+};
+
+export const fetchLikes = () => {
+  return $.ajax({
+    method: 'get',
+    url: `/api/likes`
+  });
 };

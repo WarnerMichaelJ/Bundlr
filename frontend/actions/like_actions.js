@@ -4,21 +4,23 @@ import { fetchPost } from "./post_actions";
 export const RECEIVE_LIKE = "RECEIVE_LIKE";
 export const REMOVE_LIKE = "REMOVE_LIKE";
 
+export const RECEIVE_LIKES = "RECEIVE_LIKES";
 
-const receiveLike = (like) => (
+const receiveLike = (payload) => (
   
   { 
     type: RECEIVE_LIKE,
-    like: like 
+    payload: payload 
   }
 );
 
 export const createLike = postId => dispatch => {
-  // debugger; 
-  return LikeUtil.createLike(postId).then(like => dispatch(receiveLike(like)));
+  
+  return LikeUtil.createLike(postId).then(payload => dispatch(receiveLike(payload)));
 };
 
 export const removeLike = likeId => dispatch => {
+
   return LikeUtil.removeLike(likeId).then( () => dispatch(deleteLike(likeId)));
 };
 
@@ -29,3 +31,17 @@ const deleteLike = (likeId) => (
     likeId
   }
 );
+
+const receiveLikes = (likes) => (
+
+  {
+    type: RECEIVE_LIKES,
+    likes: likes 
+  }
+);
+
+export const fetchLikes = () => (dispatch) => LikeUtil.fetchLikes()
+  .then(
+    (likes) => dispatch(receiveLikes(likes))
+  );
+

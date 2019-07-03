@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
-import TrendingPostIndexItem from './trending_posts_index_item'
+import TrendingPostIndexItem from './trending_posts_index_item';
 
 class TrendingPosts extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class TrendingPosts extends React.Component {
 
   componentDidMount() {
     this.props.fetchPosts();
-    
+    this.props.fetchLikes();
   }
 
 
@@ -45,6 +45,8 @@ class TrendingPosts extends React.Component {
           postAuthor={posters[post.author_id]}
           createLike={this.props.createLike}
           removeLike={this.props.removeLike}
+          likedIds={this.props.likedIds}
+          currentUser={this.props.currentUser}
         />
       );
     });

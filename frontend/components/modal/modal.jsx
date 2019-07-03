@@ -14,6 +14,8 @@ import QuotePostForm from '../posts/forms/create_quote_form_container';
 
 import LinkPostForm from '../posts/forms/link_post_form_container';
 
+import PhotoPostForm from '../posts/forms/photo_post_form_container';
+
 import PopupCirclesPostOptions from '../create_posts_popup_circles/create_posts_popup_circles_container';
 
 function Modal({ modal, closeModal }) {
@@ -32,6 +34,9 @@ function Modal({ modal, closeModal }) {
       break;
     case 'Link Post Form':
       component = <LinkPostForm />;
+      break;
+    case 'Photo Post Form':
+      component = <PhotoPostForm />;
       break;
     case 'render post creation circles':
       component = <PopupCirclesPostOptions />;

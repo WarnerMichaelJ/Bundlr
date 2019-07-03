@@ -21,14 +21,14 @@ export const createLike = postId => dispatch => {
 
 export const removeLike = likeId => dispatch => {
 
-  return LikeUtil.removeLike(likeId).then( () => dispatch(deleteLike(likeId)));
+  return LikeUtil.removeLike(likeId).then( (payload) => dispatch(deleteLike(payload)));
 };
 
-const deleteLike = (likeId) => (
+const deleteLike = (payload) => (
 
   {
     type: REMOVE_LIKE,
-    likeId
+    payload
   }
 );
 

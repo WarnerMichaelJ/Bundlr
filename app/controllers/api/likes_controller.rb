@@ -3,7 +3,7 @@ class Api::LikesController < ApplicationController
   def index 
     @likes = current_user.likes 
 
-    render json: @likes
+    render :index 
   end
 
   def create

@@ -51,7 +51,7 @@ class LikedPostsIndex extends React.Component {
     });
 
     return (
-      <div className="post_index_parent_div">
+      <div className="liked_post_index_parent_div">
 
         <ol className="post_index_unordered_list">
           {posts}

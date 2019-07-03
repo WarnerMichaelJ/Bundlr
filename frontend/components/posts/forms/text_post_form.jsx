@@ -25,6 +25,7 @@ class TextForm extends React.Component {
     return (
       <div className="text_post_form_container">
         <form className="the_actual_text_post_form" onSubmit={this.handleSubmit}>
+          <h3 className="text-form-username">{this.props.currentUser["username"]}</h3>
           <input className="title-input-text_post_form_container"
             type="text"
             value={this.state.title}

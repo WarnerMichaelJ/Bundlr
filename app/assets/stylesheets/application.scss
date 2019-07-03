@@ -31,6 +31,10 @@
 
 @import "./api/trending_posts_index.scss";
 
+@import "./api/form_styling/quote_form_styling.scss";
+
+@import "./api/form_styling/link_form_styling.scss";
+
 body {
     background: #001935;
 }

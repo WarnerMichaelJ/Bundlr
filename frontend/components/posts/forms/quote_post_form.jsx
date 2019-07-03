@@ -23,8 +23,8 @@ class QuotePostForm extends React.Component {
 
     return (
       <div className="form_container">
-        <div className="author_name">This will render the author's name</div>
-        <form className="text-form" onSubmit={this.handleSubmit}>
+        <div className="author_name">{this.props.currentUser["username"] }</div>
+        <form className="quote-form" onSubmit={this.handleSubmit}>
           <div className="quote"><input className="quote-text"
             type="text"
             value={this.state.title}
@@ -36,7 +36,7 @@ class QuotePostForm extends React.Component {
             type="text"
             value={this.state.body}
             onChange={this.handleInput("body")}
-            placeholder="Source"
+            placeholder="--Source"
           />
 
           <div className="post-form-footer">

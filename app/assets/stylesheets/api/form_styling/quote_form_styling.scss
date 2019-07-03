@@ -1,8 +1,8 @@
-.text_post_form_container {
+.form_container {
   
 }
 
-.the_actual_text_post_form {
+.form_container {
   min-height: 99px;
 
   width: 540px;
@@ -10,7 +10,8 @@
   border-radius: 3px;
 }
 
-.title-input-text_post_form_container {
+
+.quote-text {
   font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -24,7 +25,7 @@
   margin-bottom: 0px;
 }
 
-.body-input-text_post_form_container {
+.body-text {
   margin-bottom: 0;
   line-height: 21px;
   word-wrap: break-word;
@@ -34,7 +35,7 @@
   margin-left: 20px;
 }
 
-.close-text-post-modal {
+.close-modal {
   font-size: 13px;
   font-weight: 700;
   box-sizing: border-box;
@@ -50,7 +51,7 @@
   margin: 20px;
 }
 
-.post-button-text-form {
+.submit-post {
   border-color: #00b8ff;
   background-color: #00b8ff;
   color: white;
@@ -68,8 +69,19 @@
   justify-content: space-between;
 }
 
-.text-form-username {
-  margin-left: 20px;
+// .quote-text {
+//   margin-left: 20px;
+//   padding-top: 20px;
+//   font-weight: 700;
+// }
+
+.post-form-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.author_name {
   padding-top: 20px;
+  padding-left: 20px;
   font-weight: 700;
 }

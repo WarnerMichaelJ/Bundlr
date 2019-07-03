@@ -3,8 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-import PostIndexItem from '../post_index_item';
 
+import TrendingPostIndexItem from './trending_posts_index_item'
 
 class TrendingPosts extends React.Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class TrendingPosts extends React.Component {
     let selectedPostsFromEachUser = selectedPosts.map(post => {
 
       return (
-        <PostIndexItem
+        <TrendingPostIndexItem
           post={post}
           key={post.id}
           deletePost={this.props.deletePost}

@@ -29,7 +29,7 @@ class QuotePostForm extends React.Component {
             type="text"
             value={this.state.title}
             onChange={this.handleInput("title")}
-            placeholder="&rdquo;Put your quote here&rdquo;"
+            placeholder="&rdquo;Quote&rdquo;"
           /></div>
 
           <textarea className="body-text"

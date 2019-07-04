@@ -37,7 +37,7 @@ class TextForm extends React.Component {
             type="text"
             value={this.state.body}
             onChange={this.handleInput("body")}
-            placeholder="Say what you need to say"
+            placeholder="Your text here"
           />
           <div className="buttons-container-text-form">
             <button onClick={this.props.closeModal} className="close-text-post-modal">Close</button>

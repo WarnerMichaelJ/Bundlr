@@ -116,25 +116,26 @@ class PostIndexItem extends React.Component {
       </div>
     );
 
+      
 
 
-    
-  //   let current_post; 
+    let current_post; 
    
-  //   if (this.props.post.content_type === "photo") {
-  //     // debugger; 
-  //     current_post = traditional_item;
-  //     // debugger; 
-  //   } else if (this.props.post.content_type === "quote") {
-  //     current_post = quote_post_item;
-  // }
-  //   else {
-  //   current_post = traditional_item;
-  // }
+    if (this.props.post.content_type === "photo") {
+      // debugger; 
+      current_post = traditional_item;
+      // debugger; 
+    } else if (this.props.post.content_type === "quote") {
+      // debugger; 
+      current_post = quote_post_item;
+  }
+    else {
+    current_post = traditional_item;
+  }
   
 
 
-    return traditional_item;
+    return current_post;
 
   }
 }

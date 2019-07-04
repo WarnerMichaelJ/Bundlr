@@ -35,7 +35,7 @@ class NavBar extends React.Component {
           
 
           <li>
-            <Link to={"/"}><i className="fas fa-home"></i></Link>
+            <Link to={"/posts"}><i className="fas fa-home"></i></Link>
           </li>
 
           <li>
@@ -47,11 +47,11 @@ class NavBar extends React.Component {
           </li>
 
           {/* <li>
-            <Link to={"/"}><i className="fas fa-envelope-open-text"></i></Link>
+            <Link to={"/posts"}><i className="fas fa-envelope-open-text"></i></Link>
           </li> */}
 
           <li>
-            <Link to={"/"}><i className="far fa-user"></i></Link>
+            <Link to={"/posts"}><i className="far fa-user"></i></Link>
           </li>
 
           <li onClick={() => this.props.openModal("render post creation circles")}>

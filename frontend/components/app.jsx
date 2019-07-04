@@ -47,7 +47,7 @@ const App = () => {
 
         <ProtectedRoute exact path="/liked" component={LikedPostsIndex} />
 
-        <AuthRoute exact path="/" component={GreetingContainer} />
+        <ProtectedRoute path="/" component={GreetingContainer} />
 
 
       </Switch>

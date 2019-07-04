@@ -18,6 +18,10 @@
   justify-content: center; 
 }
 
+.post_circle.text:hover {
+  transform: scale(1.1);
+}
+
 .post_circle { 
   border-radius: 50%; 
   height: 100px; 
@@ -33,6 +37,10 @@
   justify-content: center; 
 }
 
+.post_circle.fas.fa-camera:hover {
+  transform: scale(1.1);
+}
+
 .post_circle.fas.fa-quote-right {
   animation: fadeIn .9s;
   background: #ff8a00;
@@ -42,6 +50,10 @@
   justify-content: center; 
 }
 
+.post_circle.fas.fa-quote-right:hover {
+  transform: scale(1.1);
+}
+
 .post_circle.fas.fa-link {
   animation: fadeIn 1.1s;
   background: #00cf35;
@@ -49,6 +61,10 @@
   display: flex; 
   align-items: center; 
   justify-content: center; 
+}
+
+.post_circle.fas.fa-link:hover { 
+  transform: scale(1.1);
 }
 
 .post_options_circles {

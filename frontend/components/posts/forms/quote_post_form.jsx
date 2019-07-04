@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 class QuotePostForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {title: "", body: "", };
+    this.state = {title: "", body: "", content_type: "quote"};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 

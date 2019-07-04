@@ -66,29 +66,72 @@ class PostIndexItem extends React.Component {
     heart = <i className="far red post-index fa-heart" onClick={this.handleLike}></i>;
   }
 
-  return (
-  <div className="index_item_container">
-    <div className="user_profile_pic">
-      <img className="user_profile_pic_image" src={postAuthor.profilePicture} />
-    </div>
-    <li className="post_index_list_item">
-      <div className="username-and-handleDelete-button" >
-        <p className="postAuthor-username">{postAuthor.username}</p>
-        <h3 className="handleDelete-button" onClick={this.handleDelete}>X</h3>
+    let traditional_item = (
+    <div className="index_item_container">
+      <div className="user_profile_pic">
+        <img className="user_profile_pic_image" src={postAuthor.profilePicture} />
       </div>
-      <br />
-      <img className="post_index_item_image" src={post.imageUrl} /> 
-      <br />
-      <h3 className="post-title-text">{post.title}</h3>
+      <li className="post_index_list_item">
+        <div className="username-and-handleDelete-button" >
+          <p className="postAuthor-username">{postAuthor.username}</p>
+          <h3 className="handleDelete-button" onClick={this.handleDelete}>X</h3>
+        </div>
+        <br />
+        <img className="post_index_item_image" src={post.imageUrl} />
+        <br />
+        <h3 className="post-title-text">{post.title}</h3>
 
-      <h3 className="post-body-text">{post.body}</h3>
-      <br />
-      <div className="fa-heart-flex-container">
-      {heart}
+        <h3 className="post-body-text">{post.body}</h3>
+        <br />
+        <div className="fa-heart-flex-container">
+          {heart}
+        </div>
+      </li>
+    </div>
+    );
+    
+
+
+    let quote_post_item = (
+      <div className="index_item_container">
+        <div className="user_profile_pic">
+          <img className="user_profile_pic_image" src={postAuthor.profilePicture} />
+        </div>
+        <li className="post_index_list_item">
+          <div className="username-and-handleDelete-button" >
+            <p className="postAuthor-username">{postAuthor.username}</p>
+            <h3 className="handleDelete-button" onClick={this.handleDelete}>X</h3>
+          </div>
+          <br />
+          <img className="quote_item" src={post.imageUrl} />
+          <br />
+          <h3 className="quote-text">{post.title}</h3>
+
+          <h3 className="quote-source">{post.body}</h3>
+          <br />
+          <div className="fa-heart-flex-container">
+            {heart}
+          </div>
+        </li>
       </div>
-    </li>
-  </div>
-  );
+    );
+
+  //   let current_post; 
+   
+  //   if (this.props.post.content_type === "photo") {
+  //     // debugger; 
+  //     current_post = traditional_item;
+  //     // debugger; 
+  //   } else if (this.props.post.content_type === "quote") {
+  //     current_post = quote_post_item;
+  // }
+  //   else {
+  //   current_post = traditional_item;
+  // }
+  
+
+
+    return traditional_item;
 
   }
 }

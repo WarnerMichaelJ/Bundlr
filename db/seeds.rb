@@ -28,28 +28,28 @@ user_8 = User.create(username: 'Allen_Iverson', email: "Iverson@gmail.com", pass
 # Post.create(title: "Fifth Photo")
 
 
-post_1 = Post.create(title: "So happy to be a part of the Mavs organization", author_id: user_1.id)
+post_1 = Post.create(title: "So happy to be a part of the Mavs organization", author_id: user_1.id, content_type: "photo")
 file_1 = open('https://bundlr-dev.s3.amazonaws.com/eeGoWNuN6mpZP5csUZrKP7KR')
 post_1.photo.attach(io: file_1, filename: 'Luka_Image.jpg')
 
-post_2 = Post.create(title: "Congrats Jaren on your career high! Bright future in Memphis", author_id: user_1.id)
+post_2 = Post.create(title: "Congrats Jaren on your career high! Bright future in Memphis", author_id: user_1.id, content_type: "photo")
 file_2 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Jr.jpg')
 post_2.photo.attach(io: file_2, filename: 'jaren_jackson.jpg')
 
 
-post_3 = Post.create(title: "Great meal after another Mavs win", author_id: user_1.id)
+post_3 = Post.create(title: "Great meal after another Mavs win", author_id: user_1.id, content_type: "photo")
 file_3 = open('https://bundlr-dev.s3.amazonaws.com/Pulled_pork_memphis_cuisine.jpg')
 post_3.photo.attach(io: file_3, filename: 'Classic Memphis Meal')
 
-post_4 = Post.create(title: "Scenic view after a hard NBA season", author_id: user_1.id)
+post_4 = Post.create(title: "Scenic view after a hard NBA season", author_id: user_1.id, content_type: "photo")
 file_4 = open('https://bundlr-dev.s3.amazonaws.com/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg')
 post_4.photo.attach(io: file_4, filename: 'Scenic View')
 
-post_5 = Post.create(title: "More great scenery. Got to love the city", author_id: user_1.id)
+post_5 = Post.create(title: "More great scenery. Got to love the city", author_id: user_1.id, content_type: "photo")
 file_5 = open('https://bundlr-dev.s3.amazonaws.com/city_at_night.jpg')
 post_5.photo.attach(io: file_5, filename: 'night time skyline')
 
-post_6 = Post.create(title: "Great to workout in the summer in NYC", author_id: user_1.id)
+post_6 = Post.create(title: "Great to workout in the summer in NYC", author_id: user_1.id, content_type: "photo")
 file_6 = open('https://bundlr-dev.s3.amazonaws.com/new_york_city.jpg')
 post_6.photo.attach(io: file_6, filename: 'NYC skyline')
 
@@ -65,16 +65,16 @@ profile_picture_2 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Post
 user_2.profile_picture.attach(io: profile_picture_2, filename: 'Profile Pic Jaren Smiling')
 
 
-post_7 = Post.create(title: "Great working out with you KG!", author_id: user_2.id)
+post_7 = Post.create(title: "Great working out with you KG!", author_id: user_2.id, content_type: "photo")
 file_7 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Garnett_And_Jaren_After_Workout.jpg')
 post_7.photo.attach(io: file_7, filename: 'Jaren and KG')
 
 
-post_8 = Post.create(title: "Dear Memphis coaching staff: Let. Me. Shoot. More. Threes.PLEASE", author_id: user_2.id)
+post_8 = Post.create(title: "Dear Memphis coaching staff: Let. Me. Shoot. More. Threes.PLEASE", author_id: user_2.id, content_type: "photo")
 file_8 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Let_Me_Shoot_More_Threes.jpg')
 post_8.photo.attach(io: file_8, filename: 'Jaren Shooting A Three')
 
-post_9 = Post.create(title: "Welcome to Memphis Ja! We're about to be TROUBLE next season", author_id: user_2.id)
+post_9 = Post.create(title: "Welcome to Memphis Ja! We're about to be TROUBLE next season", author_id: user_2.id, content_type: "photo")
 file_9 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Jaren_and_Ja_Shoutout.jpg')
 post_9.photo.attach(io: file_9, filename: 'Jaren Shouting Out Ja Morant')
 
@@ -100,26 +100,26 @@ profile_picture_8 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+f
 user_8.profile_picture.attach(io: profile_picture_8, filename: 'Profile Pic Iverson')
 
 
-post_10 = Post.create(title: "Congrats on the victory Kawhi! Much deserved. Hope you still want to come out to LA!", author_id: user_3.id)
+post_10 = Post.create(title: "Congrats on the victory Kawhi! Much deserved. Hope you still want to come out to LA!", author_id: user_3.id, content_type: "photo")
 file_10 = open('https://bundlr-dev.s3.amazonaws.com/Kawhi+Champagne.jpg')
 post_10.photo.attach(io: file_10, filename: 'Lebron happily tampering')
 
-post_11 = Post.create(title: "Enjoying retirement vacationing with the family!", author_id: user_4.id)
+post_11 = Post.create(title: "Enjoying retirement vacationing with the family!", author_id: user_4.id, content_type: "photo")
 file_11 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/Nash_post.jpg')
 post_11.photo.attach(io: file_11, filename: 'Nash enjoying retirement')
 
-post_12 = Post.create(title: "Getting ready to take the league by storm. #OnTheGrind #MakePelicansBasketballGreatAgain", author_id: user_5.id)
+post_12 = Post.create(title: "Getting ready to take the league by storm. #OnTheGrind #MakePelicansBasketballGreatAgain", author_id: user_5.id, content_type: "photo")
 file_12 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/Zion_training_post.jpg')
 post_12.photo.attach(io: file_12, filename: 'Zion training')
 
-post_13 = Post.create(title: "Get well soon my splash brotha.. Me and D'loading will hold down the fort until then", author_id: user_6.id)
+post_13 = Post.create(title: "Get well soon my splash brotha.. Me and D'loading will hold down the fort until then", author_id: user_6.id, content_type: "photo")
 file_13 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/Get_well_soon_Klay.jpg')
 post_13.photo.attach(io: file_13, filename: 'Wishing Klay well')
 
-post_14 = Post.create(title: "Has everybody forgotten I have six rings? Because I have six rings.", author_id: user_7.id)
+post_14 = Post.create(title: "Has everybody forgotten I have six rings? Because I have six rings.", author_id: user_7.id, content_type: "photo")
 file_14 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/Jordan_bragging.jpg')
 post_14.photo.attach(io: file_14, filename: 'Jordan rings')
 
-post_15 = Post.create(title: "I love my little guys. They my little guys. I love 'em. Can't wait to watch them take the league over. #AStormIsComing", author_id: user_8.id)
+post_15 = Post.create(title: "I love my little guys. They my little guys. I love 'em. Can't wait to watch them take the league over. #AStormIsComing", author_id: user_8.id, content_type: "photo")
 file_15 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/I_love_my_little_guys_Iverson.jpg')
 post_15.photo.attach(io: file_15, filename: 'Iverson hyping Embiid and Simmons')

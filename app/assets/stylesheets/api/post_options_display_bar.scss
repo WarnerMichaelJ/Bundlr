@@ -18,14 +18,21 @@
   align-items: center;
 }
 
+.post_button.text {
+  font-weight: 700;
+  font-size: 30px; 
+}
 
+.post_button.text:hover {
+  padding-bottom: 5px; 
+}
 
 .fas.fa-camera {
   color: #ff492f;
   display: flex; 
 }
 
-.fas.fa-camera:hover {
+.post_button.fas.fa-camera:hover {
   padding-bottom: 5px;
 }
 
@@ -34,9 +41,19 @@
   display: flex; 
 }
 
+.post_button.fas.fa-quote-right:hover {
+  padding-bottom: 5px;
+}
+
+
+
 .fas.fa-link {
   color: #00cf35;
   display: flex; 
+}
+
+.post_button.fas.fa-link:hover {
+  padding-bottom: 5px;
 }
 
 .post_options_with_profile_pic_container {

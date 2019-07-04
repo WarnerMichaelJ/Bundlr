@@ -116,6 +116,9 @@ class PostIndexItem extends React.Component {
       </div>
     );
 
+
+
+    
   //   let current_post; 
    
   //   if (this.props.post.content_type === "photo") {

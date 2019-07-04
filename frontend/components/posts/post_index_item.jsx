@@ -10,6 +10,7 @@ class PostIndexItem extends React.Component {
     this.state = { liked: false };
     this.handleLike = this.handleLike.bind(this);
     this.handleUnlike = this.handleUnlike.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount() {
@@ -46,6 +47,12 @@ class PostIndexItem extends React.Component {
       });
     });
   }
+
+  handleDelete(event) {
+    event.preventDefault();
+    this.props.deletePost(this.props.post.id);
+  }
+
   render() {
     
    
@@ -65,7 +72,10 @@ class PostIndexItem extends React.Component {
       <img className="user_profile_pic_image" src={postAuthor.profilePicture} />
     </div>
     <li className="post_index_list_item">
-      <p className="postAuthor-username">{postAuthor.username}</p>
+      <div className="username-and-handleDelete-button" >
+        <p className="postAuthor-username">{postAuthor.username}</p>
+        <h3 className="handleDelete-button" onClick={this.handleDelete}>X</h3>
+      </div>
       <br />
       <img className="post_index_item_image" src={post.imageUrl} /> 
       <br />

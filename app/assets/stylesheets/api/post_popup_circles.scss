@@ -9,3 +9,59 @@
   color: white;
 }
     
+.post_circle.text {
+  animation: fadeIn .5s;
+  background: white;
+  color: black;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.post_circle { 
+  border-radius: 50%; 
+  height: 100px; 
+  width: 100px; 
+}
+
+.post_circle.fas.fa-camera {
+  animation: fadeIn .7s;
+  background: red; 
+  color: black; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.post_circle.fas.fa-quote-right {
+  animation: fadeIn .9s;
+  background: #ff8a00;
+  color: black;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.post_circle.fas.fa-link {
+  animation: fadeIn 1.1s;
+  background: #00cf35;
+  color: black;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.post_options_circles {
+  display: flex;
+  justify-content: space-between;
+  width: 100vh;
+}
+
+@keyframes fadeIn {
+	from { 
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

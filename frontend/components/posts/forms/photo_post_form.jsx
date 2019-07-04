@@ -25,14 +25,11 @@ class PhotoForm extends React.Component {
     return (
       <div className="photo_form_container">
         <form className="the_actual_photo_form" onSubmit={this.handleSubmit}>
-          <h3 className="text-form-username">{this.props.currentUser["username"]}</h3>
-
-          <textarea className="body_input_photo_form_container"
-            type="text"
-            value={this.state.body}
-            onChange={this.handleInput("body")}
-            placeholder="Upload photos"
-          />
+          <h3 className="photo-form-username">{this.props.currentUser["username"]}</h3>
+          <div className="inner_boxes_container">
+            <input type="file" className="upload_photos"></input>
+            
+          </div>
           <div className="buttons-container-text-form">
             <button onClick={this.props.closeModal} className="close-text-post-modal">Close</button>
             <input className="post-button-text-form" type="submit" value={this.props.formType} />

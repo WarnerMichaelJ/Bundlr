@@ -22,14 +22,21 @@
 
 .fas.fa-camera {
   color: #ff492f;
+  display: flex; 
+}
+
+.fas.fa-camera:hover {
+  padding-bottom: 5px;
 }
 
 .fas.fa-quote-right {
   color: #ff8a00;
+  display: flex; 
 }
 
 .fas.fa-link {
   color: #00cf35;
+  display: flex; 
 }
 
 .post_options_with_profile_pic_container {
@@ -46,3 +53,4 @@
   margin-right: 20px;
   border-radius: 4px;
 }
+

@@ -6,13 +6,38 @@
   border-radius: 3px; 
 }
 
+.photo-form-username {
+  padding-top: 20px; 
+  padding-bottom: 15px; 
+  margin-left: 20px; 
+}
+
+.inner_boxes_container {
+  width: 100%;
+  height: 180px; 
+}
+
+// .inner_boxes_container > input {
+//   width: 50%;
+//   height: 100%;
+//   box-sizing: border-box;
+// }
+
+.photo-form-username {
+  font-weight: 700;
+}
+
+.upload_photos {
+  border-style: dashed;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
 .the_actual_photo_form {
   width: 100%; 
 }
 
 
 
-.body_input_photo_form_container {
-  width: 100%;
-  
-}

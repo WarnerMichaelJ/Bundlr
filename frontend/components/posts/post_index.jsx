@@ -9,6 +9,8 @@ import PostIndexItem from './post_index_item';
 
 import NavBar from '../nav_bar/nav_bar_container';
 
+
+
 class PostIndex extends React.Component {
   constructor(props) {
     super(props);

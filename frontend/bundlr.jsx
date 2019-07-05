@@ -5,6 +5,8 @@ import * as BlogUtil from './util/blog_util';
 import * as BlogThunkActions from './actions/blog_actions';
 import * as PostUtil from './util/post_util';
 
+import * as UserUtil from './util/user_util';
+
 import * as LikeUtil from './util/like_util';
 
 import * as PostThunkActions from './actions/post_actions';
@@ -27,12 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+
   window.store = store; 
   window.LikeUtil = LikeUtil;
   // window.PostThunkActions = PostThunkActions;
   window.PostUtil = PostUtil;
   // window.BlogThunkActions = BlogThunkActions;
   // window.BlogUtil = BlogUtil;
+
+  // window.UserUtil = UserUtil;
+
   window.logout = APIUtil.logout;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);

@@ -8,7 +8,7 @@ import RecommendedBlogs from './blogs_to_the_right';
 const msp = (state, ownProps) => {
   let users = Object.values(state.entities.users);
 
-  debugger; 
+  // debugger; 
   return {
   users
   };

@@ -48,13 +48,16 @@ class PostIndex extends React.Component {
     
     return (
 
-      <div className="post_index_parent_div">
-        <PostOptionsDisplayBar />
-        <ol className="post_index_unordered_list">
-          {posts}
-        </ol>
-      </div>
+      <div className="wraps_post_index_and_blogs_to_the_right">
+        <div className="post_index_parent_div">
 
+          <PostOptionsDisplayBar />
+          <ol className="post_index_unordered_list">
+            {posts}
+          </ol>
+        </div>
+        <RecommendedBlogs />
+      </div>
 
     );
   }

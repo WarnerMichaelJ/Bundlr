@@ -53,6 +53,11 @@ post_6 = Post.create(title: "Great to workout in the summer in NYC", author_id: 
 file_6 = open('https://bundlr-dev.s3.amazonaws.com/new_york_city.jpg')
 post_6.photo.attach(io: file_6, filename: 'NYC skyline')
 
+post_15 = Post.create(title: "I love my little guys. They my little guys. I love 'em. Can't wait to watch them take the league over. #AStormIsComing", author_id: user_8.id, content_type: "photo")
+file_15 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/I_love_my_little_guys_Iverson.jpg')
+post_15.photo.attach(io: file_15, filename: 'Iverson hyping Embiid and Simmons')
+
+
 post_16 = Post.create(title: "What are we talking about? Practice?", body: "--Allen Iverson", author_id: user_8.id, content_type: "quote")
 
 profile_picture_1 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Doncic_profile_pic.jpeg')
@@ -80,7 +85,12 @@ post_9 = Post.create(title: "Welcome to Memphis Ja! We're about to be TROUBLE ne
 file_9 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Jaren_and_Ja_Shoutout.jpg')
 post_9.photo.attach(io: file_9, filename: 'Jaren Shouting Out Ja Morant')
 
+post_13 = Post.create(title: "Get well soon my splash brotha.. Me and D'loading will hold down the fort until then", author_id: user_6.id, content_type: "photo")
+file_13 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/Get_well_soon_Klay.jpg')
+post_13.photo.attach(io: file_13, filename: 'Wishing Klay well')
+
 post_17 = Post.create(title: "Three is greater than Two", body: "--Stephen '3 > 2' Curry", author_id: user_6.id, content_type: "quote")
+
 
 
 #Add an association of has one photo to the user model as well
@@ -117,9 +127,7 @@ post_12 = Post.create(title: "Getting ready to take the league by storm. #OnTheG
 file_12 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/Zion_training_post.jpg')
 post_12.photo.attach(io: file_12, filename: 'Zion training')
 
-post_13 = Post.create(title: "Get well soon my splash brotha.. Me and D'loading will hold down the fort until then", author_id: user_6.id, content_type: "photo")
-file_13 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/Get_well_soon_Klay.jpg')
-post_13.photo.attach(io: file_13, filename: 'Wishing Klay well')
+
 
 
 
@@ -130,8 +138,5 @@ post_14.photo.attach(io: file_14, filename: 'Jordan rings')
 post_18 = Post.create(title: "Dear LeBron's Journal..", body: "As I embark on this momentous 17th season of my career, I can't help but quietly ponder, in this private Bundlr account, on all the amazing feats I've accomplished on my way to becoming the greatest player of all time. Damn it's so great being me, Lebron James..", author_id: user_3.id, content_type: "text")
 
 
-post_15 = Post.create(title: "I love my little guys. They my little guys. I love 'em. Can't wait to watch them take the league over. #AStormIsComing", author_id: user_8.id, content_type: "photo")
-file_15 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/I_love_my_little_guys_Iverson.jpg')
-post_15.photo.attach(io: file_15, filename: 'Iverson hyping Embiid and Simmons')
 
 

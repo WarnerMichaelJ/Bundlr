@@ -9,6 +9,8 @@ import PostIndexItem from './post_index_item';
 
 import NavBar from '../nav_bar/nav_bar_container';
 
+import RecommendedBlogs from '../blogs/blogs_to_the_right_container';
+
 
 
 class PostIndex extends React.Component {
@@ -20,6 +22,7 @@ class PostIndex extends React.Component {
   componentDidMount() {
     this.props.fetchPosts();
     this.props.fetchLikes();
+
   }
 
 
@@ -44,12 +47,15 @@ class PostIndex extends React.Component {
     });
     
     return (
+
       <div className="post_index_parent_div">
         <PostOptionsDisplayBar />
         <ol className="post_index_unordered_list">
           {posts}
         </ol>
       </div>
+
+
     );
   }
 

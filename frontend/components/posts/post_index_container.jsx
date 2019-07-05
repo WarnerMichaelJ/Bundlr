@@ -5,6 +5,7 @@ import PostIndex from './post_index';
 import { createLike, removeLike, fetchLikes } from "../../actions/like_actions";
 import { likedPostIds } from '../../reducers/selectors';
 
+
 const msp = state => {
   
   let posts = Object.values(state.entities.posts);
@@ -28,7 +29,7 @@ const mdp = dispatch => {
     fetchPosts: () => dispatch(fetchPosts()),
     createLike: (postId) => dispatch(createLike(postId)),
     removeLike: (likeId) => dispatch(removeLike(likeId)),
-    fetchLikes: () => dispatch(fetchLikes()),
+    fetchLikes: () => dispatch(fetchLikes())
   };
 };
 

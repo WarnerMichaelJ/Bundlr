@@ -7,7 +7,7 @@ const msp = (state) => {
 
   const currentUser = state.entities.users[state.session.id];
   return ({
-    post: { title: "", body: "", post_type: "quote", author_id: currentUser.id },
+    post: { title: "", body: "", content_type: "photo", author_id: currentUser.id },
 
     formType: "Post",
     currentUser: currentUser

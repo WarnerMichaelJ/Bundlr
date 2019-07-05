@@ -66,7 +66,7 @@ class PostIndexItem extends React.Component {
     heart = <i className="far red post-index fa-heart" onClick={this.handleLike}></i>;
   }
 
-    let traditional_item = (
+    let traditionalItem = (
     <div className="index_item_container">
       <div className="user_profile_pic">
         <img className="user_profile_pic_image" src={postAuthor.profilePicture} />
@@ -92,7 +92,7 @@ class PostIndexItem extends React.Component {
     
 
 
-    let quote_post_item = (
+    let quotePostItem = (
       <div className="index_item_container">
         <div className="user_profile_pic">
           <img className="user_profile_pic_image" src={postAuthor.profilePicture} />
@@ -102,13 +102,13 @@ class PostIndexItem extends React.Component {
             <p className="postAuthor-username">{postAuthor.username}</p>
             <h3 className="handleDelete-button" onClick={this.handleDelete}>X</h3>
           </div>
-          <br />
+  
           <img className="quote_item" src={post.imageUrl} />
-          <br />
+
           <h3 className="quote-text">{post.title}</h3>
 
           <h3 className="quote-source">{post.body}</h3>
-          <br />
+
           <div className="fa-heart-flex-container">
             {heart}
           </div>
@@ -116,26 +116,51 @@ class PostIndexItem extends React.Component {
       </div>
     );
 
-      
+    let textPostItem = (
+      <div className="index_item_container">
+        <div className="user_profile_pic">
+          <img className="user_profile_pic_image" src={postAuthor.profilePicture} />
+        </div>
+        <li className="post_index_list_item">
+          <div className="username-and-handleDelete-button" >
+            <p className="postAuthor-username">{postAuthor.username}</p>
+            <h3 className="handleDelete-button" onClick={this.handleDelete}>X</h3>
+          </div>
+
+          <img className="text_item" src={post.imageUrl} />
+
+          <h3 className="text-title">{post.title}</h3>
+
+          <h3 className="text-body">{post.body}</h3>
+
+          <div className="fa-heart-flex-container">
+            {heart}
+          </div>
+        </li>
+      </div>
+    );
 
 
-    let current_post; 
+    let currentPost; 
    
     if (this.props.post.content_type === "photo") {
       // debugger; 
-      current_post = traditional_item;
+      currentPost = traditionalItem;
       // debugger; 
     } else if (this.props.post.content_type === "quote") {
       // debugger; 
-      current_post = quote_post_item;
-  }
+      currentPost = quotePostItem;
+    } else if (this.props.post.content_type === "text") {
+      // debugger; 
+      currentPost = textPostItem;
+    }
     else {
-    current_post = traditional_item;
+      currentPost = traditionalItem;
   }
   
 
 
-    return current_post;
+    return currentPost;
 
   }
 }

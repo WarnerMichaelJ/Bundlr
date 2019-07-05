@@ -6,7 +6,7 @@ import { closeModal } from '../../../actions/ui/modal_actions';
 const msp = (state, ownProps) => {
   const currentUser = state.entities.users[state.session.id];
   return ({
-    post: { title: "", content: "", post_type: "link", author_id: currentUser.id },
+    post: { title: "", content: "", content_type: "link", author_id: currentUser.id },
 
     formType: "Post",
     currentUser: currentUser

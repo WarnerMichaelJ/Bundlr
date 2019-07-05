@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 class TextForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {title: "", body: ""};
+    this.state = {title: "", body: "", content_type: "text"};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 

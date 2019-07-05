@@ -3,8 +3,8 @@
 }
 
 .the_actual_text_post_form {
-  min-height: 99px;
-
+  // min-height: 99px;
+  height: 290px; 
   width: 540px;
   background-color: #fff;
   border-radius: 3px;
@@ -32,6 +32,7 @@
   border-style: none;
   margin-top: 10px;
   margin-left: 20px;
+  height: 110px;
 }
 
 .close-text-post-modal {
@@ -72,4 +73,24 @@
   margin-left: 20px;
   padding-top: 20px;
   font-weight: 700;
+}
+
+
+
+
+// Styling for the text posts from the post_index_item page 
+
+.text-title {
+  font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 47px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.text-body {
+  font-size: 14px; 
+  font-family: Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+  margin-left: 20px; 
 }

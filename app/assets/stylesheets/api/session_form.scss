@@ -142,3 +142,15 @@
   font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   box-sizing: border-box;
 }
+
+.login-form-box > ul > li {
+  text-align: center;
+  padding: 14px 15px;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  line-height: 16px;
+  color: #fff;
+  background: #000000;
+  background: rgba(0,0,0,0.33);
+  margin-bottom: 12px;
+}

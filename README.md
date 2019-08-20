@@ -6,6 +6,19 @@ Welcome to Bundlr! Bundlr is a content aggregation website, as well as a bloggin
 
 This project was built in 12 days. 
 
+### Technologies used
+ 1.	React.js
+ 2. Redux
+ 3.	Ruby on Rails for backend
+ 4. Bcrypt for user authentication
+ 5.	PostgreSQL
+ 6.	HTML
+ 7.	CSS
+ 8. Webpack
+ 9. SASS
+ 10. AWS S3 buckets to store images 
+
+
 ## Features
 
 - Authentication using BCrypt. Users can sign up with their own account information, or try the demo login to explore the site without having to register.
@@ -44,13 +57,4 @@ The liked posts feed is accessed by clicking on the heart icon within the naviga
 The post options modal is stylistically rendered after clicking on the "pencil" icon in the top right corner of the navigation bar. The post options presented here are duplicated within the post options display bar present at the top of the posts index feed as well. Posts can be created and subsequently deleted. All posts are selectively styled based on their content_type. 
 
 
-### Technologies used
- 1.	React.js
- 2. Redux
- 3.	Ruby on Rails for backend
- 4. Bcrypt for user authentication
- 5.	PostgreSQL
- 6.	HTML
- 7.	CSS
- 8. AWS S3 buckets to store images 
 

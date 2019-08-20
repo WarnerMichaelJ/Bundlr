@@ -8,8 +8,6 @@ import { closeModal } from '../../actions/ui/modal_actions';
 
 import TextPostForm from '../posts/forms/text_post_form_container';
 
-//Doublecheck how the closeModal is being imported above. May need to restart vscode to get the folder dropdown
-
 import QuotePostForm from '../posts/forms/create_quote_form_container';
 
 import LinkPostForm from '../posts/forms/link_post_form_container';
@@ -40,9 +38,6 @@ function Modal({ modal, closeModal }) {
       break;
     case 'render post creation circles':
       component = <PopupCirclesPostOptions />;
-      break;
-    case 'Yada Yada Case from post_options_display_bar':
-      component = "Put another container in here";
       break;
     default:
       return null;

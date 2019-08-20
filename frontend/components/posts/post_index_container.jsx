@@ -8,7 +8,7 @@ import { likedPostIds } from '../../reducers/selectors';
 
 const msp = state => {
   
-  let posts = Object.values(state.entities.posts);
+  let posts = Object.values(state.entities.posts).reverse();
   let currentUser = state.entities.users[state.session.id];
   let posters = state.entities.users;
   let likedIds = likedPostIds(state);

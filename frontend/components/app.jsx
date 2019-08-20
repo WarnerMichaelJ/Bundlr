@@ -42,7 +42,7 @@ const App = () => {
         <ProtectedRoute exact path="/posts" component={PostIndexContainer} />
         <ProtectedRoute exact path="/trendingposts" component={TrendingPosts} />
         <ProtectedRoute exact path="/liked" component={LikedPostsIndex} />
-        <ProtectedRoute path="/" component={GreetingContainer} />
+        <ProtectedRoute path="/" component={PostIndexContainer} />
       </Switch>
 
     </div>

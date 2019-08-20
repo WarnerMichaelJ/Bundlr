@@ -24,7 +24,8 @@ class NavBar extends React.Component {
 
         <div className="logo-and-search-container">
           <Link className="logo" to="/posts">
-            <i className="fas fa-file-archive"></i>
+            {/* <i className="fas fa-file-archive"></i> */}
+            <img className="bundlr-logo-image" src="https://bundlr-dev.s3.amazonaws.com/Additional_Images/Bundlr_Logo_Revised.png"/>
           </Link>
 
           <input className="search-bar-input" type="text" placeholder="Search Bundlr" />
@@ -66,7 +67,7 @@ class NavBar extends React.Component {
     const loggedOutNavBar = (
       <header>
         <Link to="/login" className="header-link">
-          <h1><i className="fas fa-file-archive"></i></h1>
+          <h1><img className="bundlr-logo-image logged-out-logo" src="https://bundlr-dev.s3.amazonaws.com/Additional_Images/Bundlr_Logo_Revised.png" /></h1>
         </Link>
       </header>
     );

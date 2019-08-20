@@ -44,17 +44,122 @@ You'll notice that the navigation bar is always present at the top of the site s
 
 ![alt text](https://raw.githubusercontent.com/WarnerMichaelJ/Bundlr-Final-Project/master/app/assets/images/Trending%20Posts%20Page.png "Trending Posts Feed")
 
-The trending posts page is accessed by clicking on the compass icon within the navigation bar. It currently displays first posts made by users of the site. Posts at any section of the site can be liked and unliked, and all likes will persist to the global redux state of the application so the current like status of all posts can be accurately represented on the same posts rendered on other sections of the site. 
+The trending posts page is accessed by clicking on the compass icon within the navigation bar. It currently displays first posts made by users of the site. Posts at any section of the site can be liked and unliked, and all likes will persist to the global redux state of the application so the current like status of all posts can be accurately represented on the same posts rendered on other sections of the site. The reducer facilitating this is displayed below. 
 
+```js
+const likesReducer = (oldState = {}, action) => {
+  Object.freeze(oldState);
+  let newState;
+
+  switch (action.type) {
+    case RECEIVE_LIKES:
+      return merge({}, oldState, action.likes);
+    case RECEIVE_LIKE:
+      return merge({}, oldState, { [action.payload.like.id]: action.payload.like });
+    case REMOVE_LIKE:
+      newState = merge({}, oldState);
+      delete newState[action.payload.like.id];
+      return newState;
+    default:
+      return oldState;
+  }
+};
+
+export default likesReducer;
+```
+
+Old likes are retained through the use of lodash's merge function taking in an empty object, the previous state, along with the incoming like within the action's payload. For removal, select likes are isolated for deletion by id. 
+
+### Liked Posts Feed
 
 ![alt text](https://raw.githubusercontent.com/WarnerMichaelJ/Bundlr-Final-Project/master/app/assets/images/Liked%20Posts%20Feed.png "Liked Posts Feed")
 
 The liked posts feed is accessed by clicking on the heart icon within the navigation bar. It renders all presently liked posts by the currently logged in user. Any unliking of posts within the liked posts feed leads to immediate removal of the post from the feed. 
 
+### Global Application Modal
+
+A flexible, application wide modal was implemented by the addition of a Modal component to the app with a default value of null. 
+
+```js
+  const App = () => {
+  return (
+    <div>
+      <Modal /> 
+      <NavBarContainer />
+      
+      <Switch>
+        <AuthRoute exact path="/login" component={LogInFormContainer} />
+        <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+        <ProtectedRoute exact path="/posts" component={PostIndexContainer} />
+        <ProtectedRoute exact path="/trendingposts" component={TrendingPosts} />
+        <ProtectedRoute exact path="/liked" component={LikedPostsIndex} />
+        <ProtectedRoute path="/" component={GreetingContainer} />
+      </Switch>
+
+    </div>
+  );
+};
+```
+
+Select components are rendered through the use of an openModal function which takes as an argument a description of the modal to be rendered. The modal then selectively renders distinct forms through a switch statement depending on the type of modal now described in the modal slice of state. 
+
+```js
+  function Modal({ modal, closeModal }) {
+  if (!modal) {
+    return null;
+  }
+
+  let component;
+
+  switch (modal) {
+    case 'Text Post Form':
+      component = <TextPostForm />;
+      break;
+    case 'Quote Post Form':
+      component = <QuotePostForm />;
+      break;
+    case 'Link Post Form':
+      component = <LinkPostForm />;
+      break;
+    case 'Photo Post Form':
+      component = <PhotoPostForm />;
+      break;
+    case 'render post creation circles':
+      component = <PopupCirclesPostOptions />;
+      break;
+    default:
+      return null;
+  }
+  return (
+    <div className="modal-background" onClick={closeModal}>
+      <div className="modal-child" onClick={e => e.stopPropagation()}>
+        {component}
+      </div>
+    </div>
+  );
+}
+
+const mapStateToProps = state => {
+  return {
+    modal: state.ui.modal
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    closeModal: () => dispatch(closeModal())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+
+```
+
+### Post Options Modal
 
 ![alt text](https://raw.githubusercontent.com/WarnerMichaelJ/Bundlr-Final-Project/master/app/assets/images/Post%20Options%20.png "Post Options Modal popup")
 
 The post options modal is stylistically rendered after clicking on the "pencil" icon in the top right corner of the navigation bar. The post options presented here are duplicated within the post options display bar present at the top of the posts index feed as well. Posts can be created and subsequently deleted. All posts are selectively styled based on their content_type. 
 
-
+![alt text](https://raw.githubusercontent.com/WarnerMichaelJ/Bundlr-Final-Project/master/app/assets/images/bundlr_quote_creation.gif "Quote Creation Gif")
 

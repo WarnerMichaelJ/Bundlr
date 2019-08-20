@@ -39,17 +39,10 @@ const App = () => {
       <Switch>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-
-
         <ProtectedRoute exact path="/posts" component={PostIndexContainer} />
-
         <ProtectedRoute exact path="/trendingposts" component={TrendingPosts} />
-
         <ProtectedRoute exact path="/liked" component={LikedPostsIndex} />
-
         <ProtectedRoute path="/" component={GreetingContainer} />
-
-
       </Switch>
 
     </div>

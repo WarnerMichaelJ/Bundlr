@@ -9,15 +9,15 @@ import merge from 'lodash/merge';
 const likesReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let newState;
-  // debugger;
+
   switch (action.type) {
     case RECEIVE_LIKES:
       return merge({}, oldState, action.likes);
     case RECEIVE_LIKE:
-      // debugger;
+
       return merge({}, oldState, { [action.payload.like.id]: action.payload.like });
     case REMOVE_LIKE:
-      // debugger;
+
       newState = merge({}, oldState);
       delete newState[action.payload.like.id];
       return newState;

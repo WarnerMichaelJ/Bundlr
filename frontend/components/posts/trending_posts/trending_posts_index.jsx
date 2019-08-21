@@ -28,9 +28,11 @@ class TrendingPosts extends React.Component {
     let selectedPosts = [];
     
     this.props.posts.forEach(post => {
-      if (!postsCount[post.author_id]) {
-        selectedPosts.push(post);
-        postsCount[post.author_id] = 1;
+      if (post.imageUrl) {
+        if (!postsCount[post.author_id]) {
+          selectedPosts.push(post);
+          postsCount[post.author_id] = 1;
+        }
       }
       
     });

@@ -6,7 +6,8 @@ import { openModal } from '../../actions/ui/modal_actions';
 
 
 const msp = state => ({
-  currentUser: state.session.id
+  currentUser: state.session.id,
+  actualCurrentUser: state.entities.users[state.session.id]
 });
 
 const mdp = dispatch => ({

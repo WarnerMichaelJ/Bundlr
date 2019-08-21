@@ -147,7 +147,7 @@
   box-sizing: border-box;
 }
 
-.login-form-box > ul > li {
+.login-form > ul > li {
   text-align: center;
   padding: 14px 15px;
   font-size: 14px;
@@ -156,5 +156,17 @@
   color: #fff;
   background: #000000;
   background: rgba(0,0,0,0.33);
-  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+#session-form-greeting {
+  color: white; 
+  text-align: center; 
+  margin-bottom: 20px; 
+  font-size: 16px; 
+  font-family: Helvetica, Arial, sans-serif
+}
+
+#session-form-greeting > p {
+  margin-bottom: 5px; 
 }

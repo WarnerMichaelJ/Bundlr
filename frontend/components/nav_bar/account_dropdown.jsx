@@ -39,7 +39,7 @@ class AccountDropdown extends React.Component {
 
 
   render() {
-
+ 
     if (this.state.open) {
       return (
         <div>
@@ -47,8 +47,11 @@ class AccountDropdown extends React.Component {
           <div className="account-dropdown">
 
             <div style={{ borderRadius: '10px 10px 0px 0px' }}>Account</div>
-            <div>Likes</div>
-            <div>Posts</div>
+            <div className="current-user-dropdown-flex-container">
+              <img className="" src={this.props.currentUser.profilePicture} /><div>{this.props.currentUser.username}</div>
+            </div>
+            <div onClick={() => this.props.history.push("/liked")}>Likes</div>
+            <div onClick={() => this.props.history.push("/posts")}>Posts</div>
               <div onClick={this.props.logout} style={{ borderRadius: '0px 0px 10px 10px' }}>Log out</div>
           </div>
         </div>

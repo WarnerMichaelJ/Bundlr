@@ -48,7 +48,7 @@ class NavBar extends React.Component {
           </li>
 
           <li>
-            <AccountDropdown logout={this.logout} />
+            <AccountDropdown logout={this.logout} currentUser={this.props.actualCurrentUser}/>
           </li>
 
           <li onClick={() => this.props.openModal("render post creation circles")}>

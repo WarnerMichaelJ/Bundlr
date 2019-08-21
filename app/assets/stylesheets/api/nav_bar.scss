@@ -129,3 +129,12 @@
   background: #f2f2f2;
   cursor: pointer;
 }
+
+.current-user-dropdown-flex-container {
+  display: flex; 
+}
+
+.current-user-dropdown-flex-container > img {
+  width: 40px;
+  height: 40px; 
+}

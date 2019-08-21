@@ -74,7 +74,10 @@ class SessionForm extends React.Component {
           <div className="login-form-container">
               <form onSubmit={this.handleSubmit} className="login-form-box">
                 <h1 className="Bundlr-Big-Text"> bundlr </h1>
-                {this.renderErrors()}
+                <div id="session-form-greeting">
+                  <p>Basketball themed clone of Tumblr.</p>
+                  <p>Our mascot "Bundle" says hello!</p>
+                </div>
                 <div className="login-form">
                   {email}
                   <label>
@@ -93,6 +96,7 @@ class SessionForm extends React.Component {
                       placeholder="Password"
                     />
                   </label>
+                  {this.renderErrors()}
                   <input className="session-submit" type="submit" value={this.props.formType} />
                   {demoLogIn}
                 </div>

@@ -13,11 +13,12 @@
   width: 100vw;
   display: flex;
   justify-content: flex-end;
+  margin-right: 20px; 
 }
 
 .nav-bar-ul > li {
   display: inline-block;
-  padding-right: 10px;
+  padding-right: 20px;
   width: auto;
   font-size: 24px; 
 }
@@ -92,4 +93,39 @@
   padding-left: 15px; 
   width: 60px; 
   height: 60px; 
+}
+
+.far.fa-user {
+  cursor: pointer; 
+  color: white; 
+  opacity: .65;
+}
+
+.account-dropdown {
+  position: absolute;
+  background: white;
+  top: 50px;
+  right: 4px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-shadow: -4px 4px 8px 0px var(--shadow);
+}
+
+.account-dropdown > div {
+  width: 240px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: center;
+  border-bottom: 1px solid lightgray;
+  font-weight: bold;
+  background: white;
+  padding-left: 20px;
+}
+.account-dropdown > div:last-child {
+  border: none;
+}
+
+.account-dropdown > div:hover {
+  background: #f2f2f2;
+  cursor: pointer;
 }

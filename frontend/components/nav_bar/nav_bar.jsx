@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import AccountDropdown from "./account_dropdown";
 
 class NavBar extends React.Component {
 
@@ -48,15 +48,11 @@ class NavBar extends React.Component {
           </li>
 
           <li>
-            <Link to={"/posts"}><i className="far fa-user"></i></Link>
+            <AccountDropdown logout={this.logout} />
           </li>
 
           <li onClick={() => this.props.openModal("render post creation circles")}>
             <i className="far fa-edit" ></i>
-          </li>
-
-          <li>
-            <button className="header-button" onClick={this.logout}>Log Out</button>
           </li>
         </ul>
 

@@ -76,7 +76,7 @@ class SessionForm extends React.Component {
                 <h1 className="Bundlr-Big-Text"> bundlr </h1>
                 <div id="session-form-greeting">
                   <p>Basketball themed clone of Tumblr.</p>
-                  <p>Our mascot "Bundle" says hello!</p>
+                  <p>Our mascot "Bundle" in the corner says hello!</p>
                 </div>
                 <div className="login-form">
                   {email}

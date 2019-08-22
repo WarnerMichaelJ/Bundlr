@@ -28,8 +28,11 @@ class NavBar extends React.Component {
             <img className="bundlr-logo-image" src="https://bundlr-dev.s3.amazonaws.com/Additional_Images/Bundlr_Logo_Revised.png"/>
           </Link>
 
-          <input className="search-bar-input" type="text" placeholder="Search Bundlr" />
- 
+          
+          <span className='navbar-search'>
+            <i className="fas fa-search"></i>
+            <input className="search-bar-input" type="text" placeholder="Search Bundlr" />
+          </span>
         </div>
 
         <ul className="nav-bar-ul">

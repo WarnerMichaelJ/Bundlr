@@ -39,16 +39,16 @@ class AccountDropdown extends React.Component {
 
 
   render() {
- 
+    let currentUser = this.props.currentUser;
     if (this.state.open) {
       return (
         <div>
           <i className="far fa-user" onClick={this.handleClose} style={{ opacity: '1.0' }} />
           <div className="account-dropdown">
 
-            <div style={{ borderRadius: '10px 10px 0px 0px' }}>Account</div>
-            <div className="current-user-dropdown-flex-container">
-              <img className="" src={this.props.currentUser.profilePicture} /><div>{this.props.currentUser.username}</div>
+            <div onClick={() => this.props.history.push(`/users/${currentUser.id}`)} style={{ borderRadius: '10px 10px 0px 0px' }}>Account</div>
+            <div onClick={() => this.props.history.push(`/users/${currentUser.id}`)} className="current-user-dropdown-flex-container">
+              <img className="" src={currentUser.profilePicture} /><div>{currentUser.username}</div>
             </div>
             <div onClick={() => this.props.history.push("/liked")}>Likes</div>
             <div onClick={() => this.props.history.push("/posts")}>Posts</div>

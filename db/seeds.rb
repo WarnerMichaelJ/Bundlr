@@ -32,7 +32,7 @@ user_8 = User.create(username: 'Allen_Iverson', email: "Iverson@gmail.com", pass
 
 
 
-profile_picture_1 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Doncic_profile_pic.jpeg')
+profile_picture_1 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/LukaProfile.jpg')
 user_1.profile_picture.attach(io: profile_picture_1, filename: 'Profile Pic Luka')
 
 

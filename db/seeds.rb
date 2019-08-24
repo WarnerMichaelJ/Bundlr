@@ -66,7 +66,6 @@ user_8.profile_picture.attach(io: profile_picture_8, filename: 'Profile Pic Iver
 
 
 
-
 post_18 = Post.create(title: "Dear LeBron's Journal..", body: "As I embark on this momentous 17th season of my career, I can't help but quietly ponder, in this private Bundlr account, on all the amazing feats I've accomplished on my way to becoming the greatest player of all time. Damn it's so great being me, Lebron James..", author_id: user_3.id, content_type: "text")
 
 

@@ -163,8 +163,11 @@
   color: white; 
   text-align: center; 
   margin-bottom: 20px; 
-  font-size: 16px; 
-  font-family: Helvetica, Arial, sans-serif
+  font-size: 20px; 
+  text-transform: lowercase; 
+  // font-family: Helvetica, Arial, sans-serif
+  font-family: georgia;
+  text-shadow: 1px 1px 0 purple;
 }
 
 #session-form-greeting > p {

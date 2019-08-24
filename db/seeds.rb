@@ -36,7 +36,7 @@ profile_picture_1 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+f
 user_1.profile_picture.attach(io: profile_picture_1, filename: 'Profile Pic Luka')
 
 
-profile_picture_2 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Jaren_smiling_profile_picture.jpg')
+profile_picture_2 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Jaren1.jpg')
 user_2.profile_picture.attach(io: profile_picture_2, filename: 'Profile Pic Jaren Smiling')
 
 #Add an association of has one photo to the user model as well
@@ -45,19 +45,19 @@ user_2.profile_picture.attach(io: profile_picture_2, filename: 'Profile Pic Jare
 profile_picture_3 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Lebron_Profile_Picture.jpg')
 user_3.profile_picture.attach(io: profile_picture_3, filename: 'Profile Pic LeBron')
 
-profile_picture_4 = open('https://bundlr-dev.s3.amazonaws.com/Additional_Images/Nash.jpg')
+profile_picture_4 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Nash1.jpg')
 user_4.profile_picture.attach(io: profile_picture_4, filename: 'Profile Pic Nash')
 
 profile_picture_5 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Zion-Williamson_Profile_Pic.jpg')
 user_5.profile_picture.attach(io: profile_picture_5, filename: 'Profile Pic Zion')
 
-profile_picture_6 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/stephen-curry2_profile_pic.jpg')
+profile_picture_6 = open('https://bundlr-dev.s3.amazonaws.com/Profile%20Pictures%20for%20Users/StephenCurry1.jpg?response-content-disposition=inline&X-Amz-Security-Token=AgoJb3JpZ2luX2VjEHcaCXVzLWVhc3QtMSJHMEUCIQCwVRbWo8u9hrboOJqqecGnuX96tbJpf2FcwH%2FJ5NvHuQIgPj3nFqyYzHYEh6%2BSgWryOtsRBIUqDZaALU8u5szDRhkq2wMIIBAAGgwyNDc3NjY0MzYzNzUiDHIvA1WGeI3TPLcBzCq4AysauWoD9%2BK0p19hctAIleE2BwuBvUkORsysm7lwD%2Bi%2BBf4aHLro9M6oYolA2lmMYu%2BQNWXoJYFb2eHBP0ielqTAxrVouW36o04ZtI3LOtTR9gikCt4s7GJZ%2FPMXe4a3WyfNQCOA38u2ku3a4znl8oee32ZBjF1rmziRXghdJzxM%2FwddwVcUr2%2BkKge4h%2FcLuQ08U%2B59%2FNSP%2BQPXBfwrgjvEyYNE6h3BdgOOfkKJDeRqquQRtnv1K4OeVRm%2BBfKMQG7bDb42%2BrH8XPLl23MRrnoq7tM7fiKlIRe%2BF8sbp043aLg6rbCnaBLL8%2FQpx3OKceE43l1y5dLaIj3G%2FfvwaO6VDOrnWIwrTKYgku%2B4NA49dTuYzbksKaMl%2BVFKp1nmJoNisCb%2FCGcvGL50kXcEhfDLmiJ%2FKjuG1KE8LAaUkJv%2B%2BeTB73n%2B87jRnId8yCPvR%2FHKgM1%2FckP4N1FWWgWLv2iUwOiDYtiSErUX6k6Ok5RuGSD4yugoRa1%2BX3j0bLiH%2Bk58QpsEdS2Bq6QB3A8auuywAK1BKZThdyHwftdlJd2UA%2BBZeZn9NvLPkMC7RVflu3lmKi3apciuMIaDh%2BsFOrQBQ2TIug0Z4zTNHtLmxq9KfhhYZny4J8FZE3ow9N8BgbXVcmFlyuHi3z8XYAIb5tRdF5UiGcR%2By0yyTQEYEcYzUiOUJBK1zcibOir9Z2pPcvBkdN9%2Fd6lTSzzVGpTkuKSO1jUcP43pEZaWgLEqZTNF9WcWS9q2tz5jovBRzNZcuGDVAiPcg%2FwS5x6RT9ykHW3vkKgIUfX99GXbbkQYQx0VjsspRJh9QF3ejasUnoTv4jOFXtdw&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190824T232153Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIATTMAHZIL2OBIQNV2%2F20190824%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=9795a831ceaa515d06ee4006f94dbd953473b6c03cd4546bc4dd8036f0106847')
 user_6.profile_picture.attach(io: profile_picture_6, filename: 'Profile Pic Curry')
 
 profile_picture_7 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Michael-Jordan-cigar_profile_pic.jpg')
 user_7.profile_picture.attach(io: profile_picture_7, filename: 'Profile Pic Jordan')
 
-profile_picture_8 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/allen-iverson_profile_pic.jpg')
+profile_picture_8 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Iverson1.jpg')
 user_8.profile_picture.attach(io: profile_picture_8, filename: 'Profile Pic Iverson')
 
 

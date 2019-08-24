@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AccountDropdown from "./account_dropdown";
+import SearchbarDropdown from "./searchbar_dropdown";
 
 class NavBar extends React.Component {
 
@@ -29,10 +30,7 @@ class NavBar extends React.Component {
           </Link>
 
           
-          <span className='navbar-search'>
-            <i className="fas fa-search"></i>
-            <input className="search-bar-input" type="text" placeholder="Search Bundlr" />
-          </span>
+          <SearchbarDropdown />
         </div>
 
         <ul className="nav-bar-ul">

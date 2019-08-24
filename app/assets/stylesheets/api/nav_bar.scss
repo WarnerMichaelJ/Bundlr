@@ -162,3 +162,19 @@
   padding: 8px 0px 8px 8px;
 }
 
+#searchdropdown {
+  position: absolute;
+  background: white;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  top: 50px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px; 
+  // left: -300px; 
+  // width: calc(100% - #{$navpadding});
+  width: 542px; 
+  border: 1px solid lightgray;
+  box-shadow: -4px 4px 8px 0px var(--shadow);
+  border-radius: 4px; 
+}

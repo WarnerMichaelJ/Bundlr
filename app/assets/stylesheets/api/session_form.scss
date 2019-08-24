@@ -41,12 +41,15 @@
 }
 
 .login-form-container {
-  animation: fadeInLeft 2s;
+  animation: fadeUp 1s;
   position: absolute;
   width: 300px;
   top:  50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  margin-top: -150px; 
+  margin-left: -150px;
+
+  // transform: translate(-50%,-50%);
 }
 
 
@@ -60,10 +63,10 @@
 	}
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeUp {
    from {
       opacity: 0;
-      transform: translateX(-700px);
+      transform: translateY(100px);
    }
    to {
       opacity: 1;

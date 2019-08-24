@@ -74,7 +74,7 @@ class PostIndexItem extends React.Component {
       <li className="post_index_list_item">
         <div className="username-and-handleDelete-button" >
           <p className="postAuthor-username">{postAuthor.username}</p>
-          <h3 className="handleDelete-button" onClick={this.handleDelete}>X</h3>
+          <h3 className="handleDelete-button" onClick={this.handleDelete}><i className="fas fa-times"></i></h3>
         </div>
         <br />
         <img className="post_index_item_image" src={post.imageUrl} />
@@ -100,7 +100,7 @@ class PostIndexItem extends React.Component {
         <li className="post_index_list_item">
           <div className="username-and-handleDelete-button" >
             <p className="postAuthor-username">{postAuthor.username}</p>
-            <h3 className="handleDelete-button" onClick={this.handleDelete}>X</h3>
+            <h3 className="handleDelete-button" onClick={this.handleDelete}><i className="fas fa-times"></i></h3>
           </div>
   
           <img className="quote_item" src={post.imageUrl} />
@@ -124,7 +124,7 @@ class PostIndexItem extends React.Component {
         <li className="post_index_list_item">
           <div className="username-and-handleDelete-button" >
             <p className="postAuthor-username">{postAuthor.username}</p>
-            <h3 className="handleDelete-button" onClick={this.handleDelete}>X</h3>
+            <h3 className="handleDelete-button" onClick={this.handleDelete}><i className="fas fa-times"></i></h3>
           </div>
 
           <img className="text_item" src={post.imageUrl} />

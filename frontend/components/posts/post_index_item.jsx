@@ -105,9 +105,9 @@ class PostIndexItem extends React.Component {
   
           <img className="quote_item" src={post.imageUrl} />
 
-          <h3 className="quote-text">{post.title}</h3>
+          <h3 className="quote-text">"{post.title}"</h3>
 
-          <h3 className="quote-source">{post.body}</h3>
+          <h3 className="quote-source">--{post.body}</h3>
 
           <div className="fa-heart-flex-container">
             {heart}

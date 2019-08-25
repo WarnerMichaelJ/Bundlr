@@ -4,12 +4,19 @@
 .recommended-blogs {
   font-family: Helvetica;
   color: white;
-  position: absolute;
-  top: 11%;
-  left: 61%;
+  position: relative;
+
+  // left: 61%;
   z-index: -1;
-  width: 300px;
+  width: 320px;
   font-size: 20px;
+}
+
+.blogs_to_the_right {
+  position: relative;
+  float: right;
+  margin-left: 30px;
+  top: 50px; 
 }
 
 .Lebron_mad_blog_image {

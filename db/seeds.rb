@@ -91,7 +91,7 @@ file_10 = open('https://bundlr-dev.s3.amazonaws.com/Kawhi+Champagne.jpg')
 post_10.photo.attach(io: file_10, filename: 'Lebron happily tampering')
 
 
-post_17 = Post.create(title: "Three is greater than Two", body: "--Stephen '3 > 2' Curry", author_id: user_6.id, content_type: "quote")
+post_17 = Post.create(title: "Three is greater than Two", body: "Stephen '3 > 2' Curry", author_id: user_6.id, content_type: "quote")
 
 
 post_13 = Post.create(title: "Get well soon my splash brotha.. Me and D'loading will hold down the fort until then", author_id: user_6.id, content_type: "photo")
@@ -114,7 +114,7 @@ file_7 = open('https://bundlr-dev.s3.amazonaws.com/Jaren_Jackson_Posts/Garnett_A
 post_7.photo.attach(io: file_7, filename: 'Jaren and KG')
 
 
-post_16 = Post.create(title: "What are we talking about? Practice?", body: "--Allen Iverson", author_id: user_8.id, content_type: "quote")
+post_16 = Post.create(title: "What are we talking about? Practice?", body: "Allen Iverson", author_id: user_8.id, content_type: "quote")
 
 post_15 = Post.create(title: "I love my little guys. They my little guys. I love 'em. Can't wait to watch them take the league over. #AStormIsComing", author_id: user_8.id, content_type: "photo")
 file_15 = open('https://bundlr-dev.s3.amazonaws.com/Posts_for_multiple_users/I_love_my_little_guys_Iverson.jpg')

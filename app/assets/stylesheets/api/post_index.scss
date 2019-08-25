@@ -99,6 +99,7 @@
 
 .liked_post_index_parent_div {
   margin-top: 30px; 
+  // width: 625px;
 }
 
 .username-and-handleDelete-button {
@@ -116,4 +117,28 @@
 .post-body-text {
   padding-top: 15px;
   padding-left: 15px;
+}
+
+.index_and_blogs_to_right {
+  display: flex;
+  flex-direction: row; 
+}
+
+.wraps_post_index_and_blogs_to_the_right {
+  display: flex;
+  flex-direction: row; 
+}
+
+#no-liked-posts-prompt {
+  font-size: 30px; 
+  font-weight: 700;
+  text-align: center;
+  color: #ff005b; 
+  // text-shadow: 0 0 30px #ff005b; 
+}
+
+#no-liked-posts-prompt2 {
+  font-size: 25px; 
+  font-weight: 700;
+  text-align: center;
 }

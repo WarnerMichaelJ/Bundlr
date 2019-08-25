@@ -19,6 +19,8 @@ import TrendingPosts from './posts/trending_posts/trending_posts_index_container
 
 import LikedPostsIndex from './posts/liked_posts_index_container';
 
+import UserProfileContainer from './user_profile/user_profile_container';
+
 import Modal from './modal/modal';
 
 import {
@@ -42,6 +44,7 @@ const App = () => {
         <ProtectedRoute exact path="/posts" component={PostIndexContainer} />
         <ProtectedRoute exact path="/trendingposts" component={TrendingPosts} />
         <ProtectedRoute exact path="/liked" component={LikedPostsIndex} />
+        <ProtectedRoute exact path="/users/:profileId" component={UserProfileContainer} />
         <ProtectedRoute path="/" component={PostIndexContainer} />
       </Switch>
 
@@ -51,10 +54,3 @@ const App = () => {
 
 export default App;
 
-
-
-{/* <ProtectedRoute exact path="/blogs/new" component={CreateBlogFormContainer} />
-<ProtectedRoute exact path="/blogs/edit" component={UpdateBlogFormContainer} />
-
-<ProtectedRoute exact path="/blogs/:blogId" component={BlogShowContainer} /> */}
-// May add these routes again later 

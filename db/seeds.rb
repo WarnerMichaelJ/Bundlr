@@ -42,19 +42,19 @@ user_2.profile_picture.attach(io: profile_picture_2, filename: 'Profile Pic Jare
 #Add an association of has one photo to the user model as well
 #I called it profile_picture instead of photo just as a heads up 
 
-profile_picture_3 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Lebron_Profile_Picture.jpg')
+profile_picture_3 = open('https://bundlr-dev.s3.amazonaws.com/Additional_Images/Lebron_Profile1.jpg')
 user_3.profile_picture.attach(io: profile_picture_3, filename: 'Profile Pic LeBron')
 
 profile_picture_4 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Nash1.jpg')
 user_4.profile_picture.attach(io: profile_picture_4, filename: 'Profile Pic Nash')
 
-profile_picture_5 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Zion-Williamson_Profile_Pic.jpg')
+profile_picture_5 = open('https://bundlr-dev.s3.amazonaws.com/Additional_Images/Zion_profile3.jpg')
 user_5.profile_picture.attach(io: profile_picture_5, filename: 'Profile Pic Zion')
 
 profile_picture_6 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/StephenCurry1.jpg')
 user_6.profile_picture.attach(io: profile_picture_6, filename: 'Profile Pic Curry')
 
-profile_picture_7 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Michael-Jordan-cigar_profile_pic.jpg')
+profile_picture_7 = open('https://bundlr-dev.s3.amazonaws.com/Additional_Images/Jordan_champagne1.jpg')
 user_7.profile_picture.attach(io: profile_picture_7, filename: 'Profile Pic Jordan')
 
 profile_picture_8 = open('https://bundlr-dev.s3.amazonaws.com/Profile+Pictures+for+Users/Iverson1.jpg')

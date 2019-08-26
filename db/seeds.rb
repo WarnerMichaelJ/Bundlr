@@ -64,9 +64,20 @@ user_8.profile_picture.attach(io: profile_picture_8, filename: 'Profile Pic Iver
 
 
 
+post_19 = Post.create(title: "Kawhy did you do this to me", body: "My endeavors to court Kawhi Leonard to the Lakers have soured. I now descend into a bitter place of both patient hope and quiet despair, as I wonder who between Kawhi and I will take the city of Los Angeles.. Who am I kidding I’m LeBron James of course I’m taking the city.", author_id: user_3.id, content_type: "text")
+
+post_22 = Post.create(title: "Thinking of Kyrie and Love", body: "In anticipation of this upcoming Taco Tuesday, my sleep has grown erratic. In my insomnia I’ve thought often of Kyrie and Kevin. Such great buddies. If only Kelly Olynyk never hurt Kevin in that Boston series. Damn you Kelly..", author_id: user_3.id, content_type: "text")
+
+
+post_20 = Post.create(title: "Cleveland! This is for you!", body: "Me", author_id: user_3.id, content_type: "quote")
+
+
+post_21 = Post.create(title: "On the topic of Taco Tuesday", body: "These past few nights I’ve noticed a strange impulse grow within me. A lost appetite. An emptiness. A strange sensation that Taco Tuesday is no longer what it once was to me. Perhaps I no longer enjoy tacos…. PSYCHE! HAH! You know I LOVE tacos and it’s TACO TUUEESSDAYYY!", author_id: user_3.id, content_type: "text")
 
 
 post_18 = Post.create(title: "Dear LeBron's Journal..", body: "As I embark on this momentous 17th season of my career, I can't help but quietly ponder, in this private Bundlr account, on all the amazing feats I've accomplished on my way to becoming the greatest player of all time. Damn it's so great being me, Lebron James..", author_id: user_3.id, content_type: "text")
+
+
 
 
 

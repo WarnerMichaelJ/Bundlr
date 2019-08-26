@@ -66,7 +66,7 @@ class TrendingPostIndexItem extends React.Component {
   return (
     <div className="trending_index_item_container">
       <li className="trending_index_list_item">
-        <p className="postAuthor-username">{postAuthor.username}</p>
+        <Link to={`users/${post.author_id}`}><p className="postAuthor-username">{postAuthor.username}</p></Link>
         <br />
         <img className="trending_index_item_image" src={post.imageUrl} />
         <br />

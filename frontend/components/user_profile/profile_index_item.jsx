@@ -67,8 +67,8 @@ class ProfileIndexItem extends React.Component {
     }
 
     let traditionalItem = (
-      <div className="index_item_container">
-        <li className="post_index_list_item">
+      <div className="profile_item_container">
+        <li className="profile_item">
           <div className="username-and-handleDelete-button" >
             <p className="postAuthor-username">{postAuthor.username}</p>
             <h3 className="handleDelete-button" onClick={this.handleDelete}><i className="fas fa-times"></i></h3>
@@ -90,8 +90,8 @@ class ProfileIndexItem extends React.Component {
 
 
     let quotePostItem = (
-      <div className="index_item_container">
-        <li className="post_index_list_item">
+      <div className="profile_item_container">
+        <li className="profile_item">
           <div className="username-and-handleDelete-button" >
            <p className="postAuthor-username">{postAuthor.username}</p>
             <h3 className="handleDelete-button" onClick={this.handleDelete}><i className="fas fa-times"></i></h3>
@@ -111,8 +111,8 @@ class ProfileIndexItem extends React.Component {
     );
 
     let textPostItem = (
-      <div className="index_item_container">
-        <li className="post_index_list_item">
+      <div className="profile_item_container">
+        <li className="profile_item">
           <div className="username-and-handleDelete-button" >
             <p className="postAuthor-username">{postAuthor.username}</p>
             <h3 className="handleDelete-button" onClick={this.handleDelete}><i className="fas fa-times"></i></h3>
@@ -135,14 +135,14 @@ class ProfileIndexItem extends React.Component {
     let currentPost;
 
     if (this.props.post.content_type === "photo") {
-      // debugger; 
+
       currentPost = traditionalItem;
-      // debugger; 
+
     } else if (this.props.post.content_type === "quote") {
-      // debugger; 
+
       currentPost = quotePostItem;
     } else if (this.props.post.content_type === "text") {
-      // debugger; 
+
       currentPost = textPostItem;
     }
     else {

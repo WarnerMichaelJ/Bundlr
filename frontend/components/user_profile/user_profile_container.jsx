@@ -1,7 +1,7 @@
 // user_profile_container.jsx 
 
 import { connect } from 'react-redux';
-import { fetchPosts } from '../../actions/post_actions';
+import { fetchPosts, deletePost } from '../../actions/post_actions';
 import { fetchUsers } from '../../actions/user_actions';
 import UserProfile from './user_profile';
 
@@ -32,7 +32,8 @@ const mdp = dispatch => {
     fetchPosts: () => dispatch(fetchPosts()),
     createLike: (postId) => dispatch(createLike(postId)),
     removeLike: (likeId) => dispatch(removeLike(likeId)),
-    fetchLikes: () => dispatch(fetchLikes())
+    fetchLikes: () => dispatch(fetchLikes()),
+    deletePost: (postId) => dispatch(deletePost(postId))
   };
 };
 

@@ -22,7 +22,6 @@ class PostIndex extends React.Component {
   componentDidMount() {
     this.props.fetchPosts();
     this.props.fetchLikes();
-
   }
 
 
@@ -45,7 +44,7 @@ class PostIndex extends React.Component {
         />
       );
     });
-    
+
     return (
 
       <div className="wraps_post_index_and_blogs_to_the_right">

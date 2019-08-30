@@ -9,7 +9,8 @@
 }
 
 .post_index_unordered_list {
-  margin: 0 0 0 200px;
+  // margin: 0 0 0 200px;
+  margin: 0;
   list-style: none;
 }
 
@@ -122,11 +123,13 @@
 .index_and_blogs_to_right {
   display: flex;
   flex-direction: row; 
+  justify-content: center; 
 }
 
 .wraps_post_index_and_blogs_to_the_right {
   display: flex;
   flex-direction: row; 
+  justify-content: center; 
 }
 
 #no-liked-posts-prompt {

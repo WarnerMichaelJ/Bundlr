@@ -43,6 +43,10 @@ class PostIndex extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    window.onscroll = null; 
+  }
+
   render () {
 
     if (!this.props.posts) return null;

@@ -11,25 +11,43 @@ import NavBar from '../nav_bar/nav_bar_container';
 
 import RecommendedBlogs from '../blogs/blogs_to_the_right_container';
 
-
+import debounce from "lodash/debounce";
 
 class PostIndex extends React.Component {
   constructor(props) {
     super(props);
 
+    this.throttledCount = 5; 
+    this.state = { throttledCount: 5 };
+    this.handlePagination = this.handlePagination.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchPosts();
     this.props.fetchLikes();
+    window.onscroll = debounce(this.handlePagination, 100);
   }
 
+  handlePagination() {
+
+    if (
+      window.innerHeight + document.documentElement.scrollTop
+      >= document.documentElement.offsetHeight
+    ) {
+      let currentCount = this.state.throttledCount + 5;
+
+      this.setState({
+        throttledCount: currentCount
+      });
+      // Do awesome stuff like loading more content!
+    }
+  }
 
   render () {
 
     if (!this.props.posts) return null;
     let posters = this.props.posters;
-    let posts = this.props.posts.map(post => {
+    let mapped = this.props.posts.map(post => {
 
       return (
         <PostIndexItem 
@@ -44,6 +62,8 @@ class PostIndex extends React.Component {
         />
       );
     });
+
+    let posts = mapped.slice(0, this.state.throttledCount);
 
     return (
 

@@ -114,6 +114,16 @@
   background: white;
   padding-left: 20px;
 }
+.account-dropdown > div:first-child {
+  width: 240px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: center;
+  border-bottom: 1px solid lightgray;
+  font-weight: bold;
+  background: white;
+  padding-left: 20px;
+}
 .account-dropdown > div:last-child {
   border: none;
 }

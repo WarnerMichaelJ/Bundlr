@@ -25,7 +25,7 @@ class NavBar extends React.Component {
 
         <div className="logo-and-search-container">
           <Link className="logo" to="/posts">
-            {/* <i className="fas fa-file-archive"></i> */}
+
             <img className="bundlr-logo-image" src="https://bundlr-dev.s3.amazonaws.com/Additional_Images/Bundlr_Icon.png"/>
           </Link>
 

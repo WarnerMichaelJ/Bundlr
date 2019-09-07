@@ -144,14 +144,14 @@ class PostIndexItem extends React.Component {
     let currentPost; 
    
     if (this.props.post.content_type === "photo") {
-      // debugger; 
+
       currentPost = traditionalItem;
-      // debugger; 
+
     } else if (this.props.post.content_type === "quote") {
-      // debugger; 
+
       currentPost = quotePostItem;
     } else if (this.props.post.content_type === "text") {
-      // debugger; 
+ 
       currentPost = textPostItem;
     }
     else {

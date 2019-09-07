@@ -54,7 +54,7 @@ class TrendingPostIndexItem extends React.Component {
   const { post, currentUser, postAuthor, deletePost, createLike, removeLike } = this.props; 
 
   let heart;
-// Will likely have to refactor removeLike so it's not depending on the like id being passed in
+
   if (this.state.liked) {
     heart = <i className="fas red fa-heart" color="red" onClick={this.handleUnlike}></i>;
   } else {

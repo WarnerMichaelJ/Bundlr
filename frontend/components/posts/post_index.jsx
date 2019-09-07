@@ -39,7 +39,7 @@ class PostIndex extends React.Component {
       this.setState({
         throttledCount: currentCount
       });
-      // Do awesome stuff like loading more content!
+
     }
   }
 
